@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/Parnab03/Gyanchakkhu-admin/blob/main/Gyanchakhhu_logo_white.svg" alt="Gyanchakkhu Logo" />
+</div>
+
 # 📚 Gyanchakkhu Admin Portal
 
 **Gyanchakkhu Admin Portal** is a web application designed to simplify library management for administrators. This portal complements the Gyanchakkhu mobile app, offering a seamless way for library authorities to manage users, books, and transactions. It serves as a powerful admin panel to oversee and streamline library operations.
