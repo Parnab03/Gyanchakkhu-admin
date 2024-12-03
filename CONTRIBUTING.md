@@ -16,7 +16,7 @@ Thank you for your interest in contributing to **Gyanchakkhu**! We’re thrilled
 ### 2. **Clone the Repository**
    Once you’ve forked the repo, clone it to your computer to start working:
    ```bash
-   git clone https://github.com/<your-username>/Tech6Sense.git
+   git clone https://github.com/<your-username>/Gyanchakkhu-admin.git
    ```
    Replace `<your-username>` with your GitHub username.
 
