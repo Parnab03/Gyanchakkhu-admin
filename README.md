@@ -66,8 +66,8 @@ We welcome contributions! If you'd like to get involved, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/gyanchakkhu-admin.git
-   cd gyanchakkhu-admin
+   git clone https://github.com/<your-username>/Gyanchakkhu-admin.git
+   cd Gyanchakkhu-admin
    cd Frontend
    ```
 2. Install dependencies:
