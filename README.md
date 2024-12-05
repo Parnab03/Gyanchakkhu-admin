@@ -59,7 +59,7 @@ For any issues, reach out to **Parnab Bagchi**.
 
 Looking for the mobile app? Check out the Gyanchakkhu Mobile App:
 
-👉 [Gyanchakkhu Admin Portal GitHub Repository](https://github.com/sayan0328/Gyanchakkhu-mobile-app)
+👉 [Gyanchakkhu Mobile App GitHub Repository](https://github.com/sayan0328/Gyanchakkhu-mobile-app)
 
 ---
 
