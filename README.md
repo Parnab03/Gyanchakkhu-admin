@@ -55,6 +55,14 @@ For any issues, reach out to **Parnab Bagchi**.
 
 ---
 
+## 🔗 Related Projects
+
+Looking for the mobile app? Check out the Gyanchakkhu Mobile App:
+
+👉 [Gyanchakkhu Admin Portal GitHub Repository](https://github.com/sayan0328/Gyanchakkhu-mobile-app)
+
+---
+
 ## 📋 Contributing to the Project
 
 We welcome contributions! If you'd like to get involved, follow these steps:
