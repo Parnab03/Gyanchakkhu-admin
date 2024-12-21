@@ -1,11 +1,16 @@
 import Register from './Components/AuthModule/Register/Register'
+import  Navbar  from './Components/CommonModule/Navbar/Navbar';
+import Footer from './Components/CommonModule/Footer/Footer';
+
 import "./App.css";
 
 function App() {
   return (
     <>
+    <Footer/>
+<Navbar/>
 
-    <Register/>
+    {/* <Register/> */}
       {/* <h1 className="title">Developer Instructions</h1>
       <div className="content">
         <h2>Component Folder Structure</h2>
