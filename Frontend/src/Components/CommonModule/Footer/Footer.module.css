@@ -1,0 +1,170 @@
+/* .footer {
+ 
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+ 
+
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-direction: row; 
+  padding: 0 20px; 
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.footer-text .highlight {
+  font-weight: bold;
+  color: #0056b3;
+  cursor: pointer;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+} */
+
+
+
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
+  z-index: 10; 
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-direction: row;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.footer-left {
+  justify-content: flex-start;
+}
+
+.footer-right {
+  justify-content: flex-end;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.footer-text .highlight {
+  font-weight: bold;
+  color: #0056b3;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.footer-decoration {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  opacity: 0.6;
+  z-index: -1; 
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
+  }
+
+  .footer-icons {
+    margin-top: 0;
+  }
+}
