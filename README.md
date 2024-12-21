@@ -44,6 +44,7 @@ The **Gyanchakkhu Mobile App** enables:
 
 ### 🖋 **Code Quality**
 - Write **minimal and clean CSS** to avoid over-styling.
+- Write dedicated CSS files for different modules to ensure encapsulation and prevent style conflicts.
 - Ensure the code is **accurate and efficient**.
 
 ### 🔗 **GitHub Pull Request (PR) Rules**
