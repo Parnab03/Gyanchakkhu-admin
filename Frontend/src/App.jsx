@@ -1,11 +1,15 @@
 import Register from './Components/AuthModule/Register/Register'
+import BookDatabase from './Components/BookDatabase/BookDatabaseMain/BookDatabase';
+import RegisterBook from './Components/BookDatabase/RegisterBook/RegisterBook';
 import "./App.css";
 
 function App() {
   return (
     <>
 
-    <Register/>
+    {/* <Register/> */}
+    <BookDatabase/>
+    {/* <RegisterBook/> */}
       {/* <h1 className="title">Developer Instructions</h1>
       <div className="content">
         <h2>Component Folder Structure</h2>

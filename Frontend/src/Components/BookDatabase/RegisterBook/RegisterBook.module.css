@@ -1,0 +1,143 @@
+.regmain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.nav{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+   
+}
+.backbtn{
+    height: 61px;
+    width: 152px;
+    border: none;
+    border-radius: 59px;
+    margin: 10px;
+    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    color: rgb(245, 242, 242);
+    cursor: pointer;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.back{
+    height: 26px;
+    width: 28px;
+    color: white;
+}
+.Regcont{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 65%;
+}
+.registerbtn{
+    height: 61px;
+    width: 365px;
+    border: none;
+    border-radius: 59px;
+    margin: 10px;
+    background: linear-gradient(276deg, #8183FF 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Qrcode{
+    height: 36px;
+    width: 36px;
+
+}
+.Main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 14px;
+    border: 2px solid #6265FF;
+    border-radius: 20px;
+}
+.header{
+    color: #7A7DFF;
+    font-size: 40px;
+    margin: 20px 10px 40px 10px;
+}
+.mainform{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin: 20px;
+}
+.formGroup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.formGroup input{
+    width: 509px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #6265FF;
+    background-color: #f000;
+    font-size: 20px;
+    color: #8284FF;
+    margin: 5px;
+}
+.formGroup label{
+    font-size: 25px;
+    color: #6265FF;
+    width: 312px;
+}
+.Qrcode{
+    height: 284px;
+    width: 284px;
+    margin: 0px 25px 0px 25px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 45%;
+    gap: 50px;
+}
+.btn1{
+    width: 341px;
+    height: 61px;
+    margin: 15px 0px 15px 0px;
+    border: none;
+    border-radius: 59px;
+    color: white;
+    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    cursor: pointer;
+    font-size: 25px;
+}
+.btn2{
+    width: 154px;
+    height: 61px;
+    margin: 15px;
+    margin: 15px 0px 15px 0px;
+    border: none;
+    border-radius: 59px;
+    color: white;
+    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    cursor: pointer;
+    font-size: 25px;
+}
