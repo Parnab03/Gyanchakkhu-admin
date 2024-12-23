@@ -7,10 +7,11 @@ import "./App.css";
 function App() {
     return (
         <>
-            {/* <Navbar />
-            <Footer /> */}
+            <Navbar />
+            {/* <Register/> */}
+            <h1 className="test">Parnab Bagchi</h1>
+            <Footer />
 
-            <Register/>
         </>
     );
 }
