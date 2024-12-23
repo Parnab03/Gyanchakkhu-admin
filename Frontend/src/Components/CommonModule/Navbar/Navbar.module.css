@@ -1,0 +1,51 @@
+/* Navbar.module.css */
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    border-radius: 58.611px;
+    border: 2px solid #6265ff;
+    background: rgba(166, 167, 255, 0);
+    padding: 7px;
+}
+
+.logo img {
+    display: flex;
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+}
+
+.navlink {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 30px;
+}
+
+.userprofile img {
+    display: flex;
+    margin: 0 20px;
+    height: 40px;
+    width: auto;
+}

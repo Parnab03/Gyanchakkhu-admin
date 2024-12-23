@@ -1,14 +1,20 @@
-.navbar{
+.Authnav {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+.navbar {
+    width: 96%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
 }
-.icon{
+.icon {
+    display: flex;
+    margin-left: 1.5%;
     height: 77.43px;
-    width: 50.01px;
 }
-.logo{
+.logo {
+    display: flex;
     height: 86.59px;
-    width: 350.51px;
 }
