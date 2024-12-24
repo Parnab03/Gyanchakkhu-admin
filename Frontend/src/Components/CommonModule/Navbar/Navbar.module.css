@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 96%;
+    width: 94%;
     border-radius: 58.611px;
     border: 2px solid #6265ff;
     background: rgba(166, 167, 255, 0);
@@ -31,6 +31,7 @@
 .navlinks {
     display: flex;
     align-items: center;
+    gap: 40px;
 }
 
 .navlink {
@@ -40,12 +41,18 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-left: 30px;
+    /* padding-left: 30px; */
+}
+
+.navlink.selected {
+    color: #0B59D5; 
+    border-bottom: 2px solid #0B59D5; 
+    padding-bottom: 5px;
 }
 
 .userprofile img {
     display: flex;
-    margin: 0 20px;
+    margin: 0 20px 0 30px;
     height: 40px;
     width: auto;
 }
