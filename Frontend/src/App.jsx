@@ -10,8 +10,8 @@ function App() {
     return (
         <>
             <Navbar />
-            <RegisterBook/>
-            {/* <BookDatabase /> */}
+            {/* <RegisterBook/> */}
+            <BookDatabase />
             <Footer />
             {/* <BookDatabase/> */}
 
