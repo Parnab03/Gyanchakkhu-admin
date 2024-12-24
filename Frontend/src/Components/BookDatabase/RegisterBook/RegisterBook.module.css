@@ -1,34 +1,32 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    /* height: 100%; */
 }
-.Regmain{
+
+.Regmain {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     width: 97%;
-   
 }
-.backbtnmain{
-    display: flex;
-    justify-content: flex-start;
-}
-.backbtn{
+
+.backbtn {
     height: 50px;
     width: 130px;
     border: none;
     border-radius: 59px;
-    margin: 10px;
-    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    background: linear-gradient(
+        276deg,
+        #5a8dee 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
     color: rgb(245, 242, 242);
     cursor: pointer;
     font-size: 16px;
@@ -37,73 +35,84 @@ body{
     justify-content: center;
     gap: 10px;
 }
-.nobtn{
+
+.nobtn {
     opacity: 0;
-    width: 150px;
 }
-.back{
+
+.back {
     height: 26px;
     width: 28px;
     color: white;
 }
-.Regcont{
+
+.Regcont {
+    margin-left: 1.2%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 25px 25px 0px 25px;
+    width: 98%;
 }
-.regButton{
-    display: flex;
-    justify-content: flex-end;
-   
-}
-.registerbtn{
+
+.registerbtn {
     height: 50px;
     width: 280px;
     border: none;
     border-radius: 59px;
-    margin: 10px;
-    background: linear-gradient(276deg, #8183FF 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    margin: 10px 0;
+    margin-left: -0.5%;
+    background: linear-gradient(
+        276deg,
+        #8183ff 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
     color: black;
-    cursor: pointer;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-.Qrcode{
-    height: 30px;
-    width: 30px;
-
-}
-.secondpart{
+.QrMain{
     display: flex;
-    /* flex-direction: column; */
+    border: 2px solid #6265ff;
+    border-radius: 15px;
+    margin: 0px 35px;
+}
+
+.Qrcode {
+    height: 230px;
+    width: auto;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.secondpart {
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
     width: 96%;
     border-radius: 20px;
 }
-.Main{
+
+.Main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin: 40px 0px 40px 0px;
     width: 98%;
-    border: 2px solid #6265FF;
+    border: 2px solid #6265ff;
     border-radius: 20px;
 }
-.header{
-    color: #7A7DFF;
+
+.header {
+    color: #7a7dff;
     font-size: 30px;
     margin: 20px 10px 40px 10px;
 }
-.mainform{
+
+.mainform {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -111,33 +120,36 @@ body{
     margin-top: 20px;
     margin: 10px;
 }
-.formGroup{
+
+.formGroup {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 5px;
 }
-.formGroup input{
+
+.formGroup input {
     width: 440px;
     padding: 10px;
     border-radius: 12px;
-    border: 2px solid #6265FF;
+    border: 2px solid #6265ff;
     background-color: #f000;
     font-size: 20px;
-    color: #8284FF;
+    color: #8284ff;
     margin: 5px;
+
+    &:focus {
+        outline: none;
+    }
 }
-.formGroup label{
+
+.formGroup label {
     font-size: 22px;
-    color: #6265FF;
+    color: #6265ff;
     width: 312px;
 }
-.Qrcode{
-    height: 230px;
-    width: 230px;
-    margin: 0px 35px 0px 35px;
-}
-.buttons{
+
+.buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -146,26 +158,29 @@ body{
     gap: 50px;
     justify-content: center;
 }
-.btn1{
-    width: 260px;
-    height: 50px;
-    margin: 15px 0px 15px 12px;
+
+.btn1,
+.btn2 {
     border: none;
     border-radius: 59px;
     color: white;
-    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    background: linear-gradient(
+        276deg,
+        #5a8dee 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
     cursor: pointer;
     font-size: 16px;
 }
-.btn2{
+
+.btn1 {
+    width: 260px;
+    height: 50px;
+    margin: 15px 0px 15px 12px;
+}
+
+.btn2 {
     width: 150px;
     height: 50px;
     margin: 15px;
-    margin: 15px 0px 15px 0px;
-    border: none;
-    border-radius: 59px;
-    color: white;
-    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
-    cursor: pointer;
-    font-size: 16px;
 }

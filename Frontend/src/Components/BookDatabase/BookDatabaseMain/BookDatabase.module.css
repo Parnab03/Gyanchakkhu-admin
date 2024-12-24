@@ -1,96 +1,101 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(180deg, #C8C8FF, #FFFFFF);
-    /* height: 100%; */
-    width: 100%;
-    background-repeat: no-repeat;
 }
-.bookDatabase{
+.bookDatabase {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin: 20px;
+    /* margin: 20px; */
 }
-.nav{
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    width: 98%;
-   
+    /* margin-top: 20px; */
+    width: 96.5%;
 }
 .searchContainer {
-    position: relative; 
+    position: relative;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
-    width: 98%; 
+    width: 98%;
     margin: 10px;
 }
-.search{
-    
-    width: 736px;
-    height: 61px; 
-    padding: 8px 12px 8px 36px; 
-    font-size: 24px; 
-    border: 1px solid #627EFF; 
-    border-radius: 59px; 
-    outline: none; 
-    transition: border-color 0.2s ease-in-out; 
-}
-.searchIcon{
+
+.searchIcon {
     position: absolute;
-    left: 10px; 
+    left: 25px;
     height: 23px;
     width: 23px;
-    color: #888; 
-    font-size: 18px; 
-    pointer-events: none; 
+    color: #888;
+    font-size: 18px;
+    pointer-events: none;
 }
 
-.searchbtn{
+.search {
+    
+    width: 100%;
+    height: 61px;
+    padding: 8px 12px 10px 60px;
+    font-size: 20px;
+    border: 1px solid #627eff;
+    border-radius: 59px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.40);
+    color: #636363;
+}
+
+.searchbtn {
     height: 61px;
     width: 170px;
     border: none;
     border-radius: 59px;
     margin: 10px;
     color: white;
-    background: linear-gradient(276deg, #5A8DEE 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    background: linear-gradient(
+        276deg,
+        #5a8dee 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
 }
-.registerbtn{
+.registerbtn {
     height: 61px;
-    width: 365px;
+    width: 400px;
     border: none;
     border-radius: 59px;
-    margin: 10px;
-    background: linear-gradient(276deg, #8183FF 75.7%, rgba(255, 255, 255, 0.15) 180.24%);
+    margin-left: 10px;
+    background: linear-gradient(
+        276deg,
+        #8183ff 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
     color: black;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-.Qrcode{
+.Qrcode {
     height: 36px;
     width: 36px;
-
 }
-.mainContainer{
-    width: 96%;
+.mainContainer {
+    width: 94%;
     height: 500px;
-    border: 2px solid #6265FF;
+    border: 2px solid #6265ff;
     border-radius: 20px;
-    margin: 50px 0px 40px 0px;
-
+    margin: 10px 0px 40px 0px;
 }
-.bookDatabase {
-  flex: 1; 
-}
+/* .bookDatabase {
+    flex: 1;
+} */

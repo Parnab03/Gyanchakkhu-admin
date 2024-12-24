@@ -8,15 +8,15 @@ import "./App.css";
 
 function App() {
     return (
-      <>
-        <Navbar />
-        {/* <RegisterBook/> */}
-        <BookDatabase />
-        <Footer />
-        {/* <BookDatabase/> */}
+        <>
+            <Navbar />
+            <RegisterBook/>
+            {/* <BookDatabase /> */}
+            <Footer />
+            {/* <BookDatabase/> */}
 
-        {/* <Register/> */}
-      </>
+            {/* <Register/> */}
+        </>
     );
 }
 

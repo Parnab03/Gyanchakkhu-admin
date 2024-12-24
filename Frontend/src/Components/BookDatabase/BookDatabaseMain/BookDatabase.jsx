@@ -11,7 +11,7 @@ const BookDatabase = () => {
               <GoSearch className={Styles.searchIcon} />
               <input
                 type="search"
-                placeholder="Enter Username"
+                placeholder="Enter Book Name"
                 className={Styles.search}
               />
               <button className={Styles.searchbtn}>Search</button>
