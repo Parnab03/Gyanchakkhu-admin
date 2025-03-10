@@ -1,7 +1,7 @@
 import Styles from "./RegisterBook.module.css";
 import QrCode from "/QrCode.svg";
 import Back from "/Back.svg";
-import tempQr from "./QRs/tempQr.png";
+import tempQr from "./QRGenerator/tempQr.png";
 
 const RegiterBook = () => {
     return (

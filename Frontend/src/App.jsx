@@ -10,7 +10,7 @@ function App() {
     return (
         <>
             <Navbar />
-            <RegisterBook/>
+            <RegisterBook />
             {/* <BookDatabase /> */}
             <Footer />
             {/* <BookDatabase/> */}
