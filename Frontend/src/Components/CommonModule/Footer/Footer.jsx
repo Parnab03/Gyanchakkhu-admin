@@ -25,7 +25,7 @@ const Footer = () => {
                         className={Styles.footerLogo}
                     />
                     <div className={Styles.footerText}>
-                        Designed And Dev By{" "}
+                        Designed and Dev by{" "}
                         <span className={Styles.highlight}>NIRANTAR →</span>
                     </div>
                 </div>
