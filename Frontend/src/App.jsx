@@ -5,19 +5,51 @@ import Footer from "./Components/CommonModule/Footer/Footer";
 import BookDatabase from "./Components/BookDatabase/BookDatabaseMain/BookDatabase";
 import RegisterBook from "./Components/BookDatabase/RegisterBook/RegisterBook";
 
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
     return (
         <>
-            {/* <Navbar /> */}
-            {/* <RegisterBook/> */}
-            {/* <BookDatabase /> */}
-            {/* <Footer /> */}
-            {/* <BookDatabase/> */}
-
-            {/* <Register/> */}
-            <Login/>
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<Navigate to="/login" replace />}
+                    />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route
+                        path="/bookdatabase"
+                        element={
+                            <>
+                                <Navbar />
+                                <BookDatabase />
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/bookdatabase/registerbook"
+                        element={
+                            <>
+                                <Navbar />
+                                <RegisterBook />
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/userdatabase"
+                        element={
+                            <>
+                                <Navbar />
+                                <Footer />
+                            </>
+                        }
+                    />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Styles from "./Navbar.module.css";
 import GyanchakkhuIcon from "/GyanchakkhuIcon.svg";
 import LibraryProfileIcon from "/LibraryProfileIcon.svg";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [selectedLink, setSelectedLink] = useState("book-database");
-    
+
     return (
         <div className={Styles.mainContainer}>
             <nav className={Styles.navbar}>
@@ -14,8 +15,8 @@ const Navbar = () => {
                 </div>
                 <div className={Styles.navContainer}>
                     <div className={Styles.navlinks}>
-                        <a
-                            href="/book-database"
+                        <NavLink
+                            to="/bookdatabase"
                             className={`${Styles.navlink} ${
                                 selectedLink === "book-database"
                                     ? Styles.selected
@@ -23,9 +24,9 @@ const Navbar = () => {
                             }`}
                             onClick={() => setSelectedLink("book-database")}>
                             Book Database
-                        </a>
-                        <a
-                            href="/user-database"
+                        </NavLink>
+                        <NavLink
+                            to="/userdatabase"
                             className={`${Styles.navlink} ${
                                 selectedLink === "user-database"
                                     ? Styles.selected
@@ -33,7 +34,7 @@ const Navbar = () => {
                             }`}
                             onClick={() => setSelectedLink("user-database")}>
                             User Database
-                        </a>
+                        </NavLink>
                     </div>
                     <div className={Styles.userprofile}>
                         <img

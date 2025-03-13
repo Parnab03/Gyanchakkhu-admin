@@ -1,15 +1,22 @@
 import Styles from "./RegisterBook.module.css";
 import QrCode from "/QrCode.svg";
 import Back from "/Back.svg";
-import tempQr from "./QRs/tempQr.png";
+import tempQr from "./QRGenerator/tempQr.png";
+import { useNavigate } from "react-router-dom";
 
 const RegiterBook = () => {
+    const navigate = useNavigate();
+    const routeHandler = () => {
+        navigate("/bookdatabase");
+    };
     return (
         <>
             <div className={Styles.Regmain}>
                 <div className={Styles.nav}>
                     <div className={Styles.Regcont}>
-                        <button className={Styles.backbtn}>
+                        <button
+                            className={Styles.backbtn}
+                            onClick={routeHandler}>
                             <img src={Back} alt="" className={Styles.back} />{" "}
                             Back
                         </button>
