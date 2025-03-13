@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Register.module.css";
 import AuthNav from "../AuthNavbar/AuthNav";
+import { NavLink } from "react-router-dom";
 const Register = () => {
     const [formData, setFormData] = useState({
         name: "",
@@ -33,7 +34,9 @@ const Register = () => {
             <AuthNav />
             <div className={styles.Maincontent}>
                 <div className={styles.regtxt}>Register Now</div>
-                <p className={styles.ptxt}>Welcome Back. Please Enter Your Details</p>
+                <p className={styles.ptxt}>
+                    Welcome Back. Please Enter Your Details
+                </p>
 
                 <form
                     action=""
@@ -117,7 +120,8 @@ const Register = () => {
                 {!uid && (
                     <div className={styles.warning}>
                         <p>
-                            Already have an account? <a href="/login">Login</a>
+                            Already have an account?{" "}
+                            <NavLink to="/login">Login</NavLink>
                         </p>
                     </div>
                 )}
