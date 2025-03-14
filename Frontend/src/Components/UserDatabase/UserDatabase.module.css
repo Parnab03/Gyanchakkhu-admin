@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.UserDatabase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  top: 0;
+}
+
+.Nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.searchContainer {
+  width: 85%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 35px;
+  height: 23px;
+  width: 23px;
+  color: #888;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.Search {
+  width: 100%;
+  height: 61px;
+  padding: 8px 12px 10px 60px;
+  font-size: 20px;
+  border: 1px solid #627eff;
+  border-radius: 59px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.4);
+  color: #636363;
+}
+
+.searchBtn {
+  height: 61px;
+  width: 170px;
+  border: none;
+  border-radius: 59px;
+  margin-left: 10px;
+  color: white;
+  background: linear-gradient(
+    276deg,
+    #5a8dee 75.7%,
+    rgba(255, 255, 255, 0.15) 180.24%
+  );
+  cursor: pointer;
+  font-size: 20px;
+}
+.Udetails {
+  border: 2px solid #5a8dee;
+  border-radius: 20px;
+  padding: 30px;
+  padding-top: 0px;
+  margin: 15px 0;
+  width: 80%;
+}
+h2 {
+  color: #5a5aee;
+  font-size: 25px;
+}
+
+
+.bookItem {
+  background: #c8c9ff;
+  border: 2px solid #5a8dee;
+  border-radius: 20px;
+  width: 80%;
+  
+}
+
+.dateContainer {
+  display: flex;
+  justify-content: space-evenly;
+  color: #333;
+  padding: 3px;
+}
+
+.detail {
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+  font-size: 24px;
+  text-align: center;
+  margin-block-end: 35px;
+  align-items: center;
+}
+.detail1{
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+}
+.nameHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.Dbtn {
+  background-color: transparent;
+  outline: none;
+  border: 0px solid;
+}
+.dimg {
+  width: 25px;
+  height: 60px;
+}
+
