@@ -24,7 +24,7 @@ body {
     text-align: center;
     justify-content: space-between;
     width: 98%;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
 }
 
 .searchIcon {
@@ -94,7 +94,7 @@ body {
     height: 500px;
     border: 2px solid #6265ff;
     border-radius: 20px;
-    margin: 10px 0px 40px 0px;
+    margin: 35px 0px 40px 0px;
 }
 /* .bookDatabase {
     flex: 1;

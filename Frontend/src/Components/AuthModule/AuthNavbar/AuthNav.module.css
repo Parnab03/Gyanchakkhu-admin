@@ -4,17 +4,17 @@
     justify-content: center;
 }
 .navbar {
-    width: 96%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .icon {
     display: flex;
-    margin-left: 1.5%;
-    height: 77.43px;
+    /* margin-left: 1.5%; */
+    height: 80px;
 }
-.logo {
+.text {
     display: flex;
-    height: 86.59px;
+    height: 100px;
 }

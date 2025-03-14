@@ -4,21 +4,56 @@ import Navbar from "./Components/CommonModule/Navbar/Navbar";
 import Footer from "./Components/CommonModule/Footer/Footer";
 import BookDatabase from "./Components/BookDatabase/BookDatabaseMain/BookDatabase";
 import RegisterBook from "./Components/BookDatabase/RegisterBook/RegisterBook";
+import Error from "./Components/ErrorModule/Error";
 import UserDatabase from "./Components/UserDatabase/UserDatabase";
 
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
     return (
         <>
-            {/* <Navbar /> */}
-            {/* <RegisterBook/> */}
-            {/* <BookDatabase /> */}
-            {/* <Footer /> */}
-            {/* <BookDatabase/> */}
-            <UserDatabase></UserDatabase>
-            {/* <Register/> */}
-            {/* <Login/> */}
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<Navigate to="/login" replace />}
+                    />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route
+                        path="/bookdatabase"
+                        element={
+                            <>
+                                <Navbar />
+                                <BookDatabase />
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/bookdatabase/registerbook"
+                        element={
+                            <>
+                                <Navbar />
+                                <RegisterBook />
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/userdatabase"
+                        element={
+                            <>
+                                <Navbar />
+                                <UserDatabase/>
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route path="/*" element={<Error />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }

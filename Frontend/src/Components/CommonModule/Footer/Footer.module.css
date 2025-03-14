@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     height: 100vh;
+    display: inline;
+    vertical-align: bottom;
 }
 
 .footercontent {
@@ -15,6 +17,8 @@
     align-items: center;
     background-color: #d9d9d9;
     z-index: 1;
+    
+    
 }
 
 .footerLeft {

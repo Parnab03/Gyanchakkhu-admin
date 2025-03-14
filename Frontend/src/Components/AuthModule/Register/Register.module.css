@@ -3,77 +3,93 @@ body {
     padding: 0;
 }
 
-.regtxt {
+.heading {
     color: #000;
-    font-family: "DM Serif Display";
-    font-size: 47.29px;
-    font-style: bold;
+    font-family: Roboto;
+    font-size: 2.9rem;
+    font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 0;
+    padding-bottom: 4%;
 }
 
 .ptxt {
     color: #a0a0a0;
-    font-size: 22.872px;
-    font-style: regular;
+    font-size: 1.35rem;
+    font-style: normal;
     font-weight: 400;
     line-height: normal;
+    a {
+        color: #0b59d5;
+        text-decoration: none;
+    }
 }
 .Maincontent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    
+    height: 70vh;
+    p {
+        margin: 0;
+        padding: 0;
+    }
 }
-.Maincontent h1,
-.Maincontent p {
-    margin: 0;
-    padding: 0;
-}
-.Maincontent h1 {
-    color: black;
-}
-.Maincontent p {
-    color: #a0a0a0;
+.RegisterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 64rem;
+    height: 31rem;
+    flex-shrink: 0;
+    border-radius: 30px;
+    backdrop-filter: blur(102px);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .register {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 100%;
 }
 .formgroup {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    height: 70px;
+    margin: 2px;
     justify-content: space-between;
 
     input {
         width: 100%;
         border-radius: 10px;
         border: 1.2px solid #b5b5b5;
-        color: #6e6e6e;
+        color: #969696;
         padding: 15px;
-        margin: 10px 10px 11px 35px;
+        margin: 10px;
         background-color: #f000;
-        font-size: 20px;
-        font-style: italic;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-style: normal;
     }
     input:focus {
         outline: none;
     }
 }
 .button {
-    width: 300px;
+    width: 385px;
     height: 50px;
     border: none;
-    margin: 10px;
+    margin: 7px 0px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     color: white;
-    font-size: 16px;
     border-radius: 10.162px;
     background: linear-gradient(
         276deg,
@@ -81,24 +97,61 @@ body {
         rgba(255, 255, 255, 0.15) 180.24%
     );
 }
-.warning p {
-    color: #b5b5b5;
-}
-.warning a {
-    color: #0b59d5;
-    text-decoration: none;
-}
 .generate {
+    padding-top: 1%;
+    width: 77.5%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    p {
+        color: #a0a0a0;
+    }
+    span {
+        color: #f00;
+    }
+}
+.uid {
+    padding-left: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    .genheading {
+        font-family: Roboto;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .genpara {
+        font-family: Roboto;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
-.generate h2 {
-    color: #a0a0a0;
-}
-.generate p {
-    color: #a0a0a0;
-    span {
-        color: red;
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #929292;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+
+    img {
+        width: 20px;
+        padding: 1px;
+    }
+    .highlight {
+        color: #5a8dee;
     }
 }

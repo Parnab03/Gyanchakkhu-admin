@@ -20,7 +20,7 @@ body {
 }
 
 .searchContainer {
-  width: 85%;
+  width: 95%;
   position: relative;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@ body {
   padding: 30px;
   padding-top: 0px;
   margin: 15px 0;
-  width: 80%;
+  width: 90%;
 }
 h2 {
   color: #5a5aee;

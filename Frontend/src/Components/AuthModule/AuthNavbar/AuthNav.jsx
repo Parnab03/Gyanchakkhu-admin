@@ -1,20 +1,12 @@
 import styles from "./AuthNav.module.css";
-import GYANCHAKKHULogo from "/GYANCHAKKHULogo.svg";
-import GyanchakkhuIcon from "/GyanchakkhuIcon.svg";
+import Icon from "/Gyanchakhhu_new_icon.png";
+import Text from "/Gyanchakkhu_admin_text.png";
 const AuthNav = () => {
     return (
         <nav className={styles.Authnav}>
             <div className={styles.navbar}>
-                <img
-                    src={GyanchakkhuIcon}
-                    alt="GyanchakkhuIcon"
-                    className={styles.icon}
-                />
-                <img
-                    src={GYANCHAKKHULogo}
-                    alt="GYANCHAKKHULogo"
-                    className={styles.logo}
-                />
+                <img src={Icon} alt="Icon" className={styles.icon} />
+                <img src={Text} alt="Logo" className={styles.text} />
             </div>
         </nav>
     );
