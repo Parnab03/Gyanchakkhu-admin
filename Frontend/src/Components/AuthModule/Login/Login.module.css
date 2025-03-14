@@ -14,7 +14,7 @@ body {
     color: #000;
     font-family: Roboto;
     font-size: 2.9rem;
-    font-style: semi-bold;
+    font-style: normal;
     font-weight: 600;
     line-height: 0;
 }
@@ -108,8 +108,5 @@ body {
     }
     .highlight {
         color: #5a8dee;
-        /* justify-content: center;
-        align-items: center; */
-        /* text-align: center; */
     }
 }

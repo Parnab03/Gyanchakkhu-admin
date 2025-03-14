@@ -4,6 +4,7 @@ import Navbar from "./Components/CommonModule/Navbar/Navbar";
 import Footer from "./Components/CommonModule/Footer/Footer";
 import BookDatabase from "./Components/BookDatabase/BookDatabaseMain/BookDatabase";
 import RegisterBook from "./Components/BookDatabase/RegisterBook/RegisterBook";
+import Error from "./Components/ErrorModule/Error";
 
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
@@ -48,6 +49,7 @@ function App() {
                             </>
                         }
                     />
+                    <Route path="/*" element={<Error />} />
                 </Routes>
             </BrowserRouter>
         </>

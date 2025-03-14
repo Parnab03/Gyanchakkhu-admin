@@ -85,7 +85,7 @@ const Login = () => {
                         <div className={styles.ptxt}>
                             <p>
                                 Not registered yet?{" "}
-                                <NavLink to="/register">Register Now</NavLink>
+                                <NavLink to="/register">Register</NavLink>
                             </p>
                         </div>
                     )}
