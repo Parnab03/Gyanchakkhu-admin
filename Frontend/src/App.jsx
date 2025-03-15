@@ -49,6 +49,15 @@ function App() {
                             </>
                         }
                     />
+                    <Route
+                        path="/profile"
+                        element={
+                            <>
+                                <Navbar />
+                                <Footer />
+                            </>
+                        }
+                    />
                     <Route path="/*" element={<Error />} />
                 </Routes>
             </BrowserRouter>
