@@ -37,10 +37,12 @@ const Navbar = () => {
                         </NavLink>
                     </div>
                     <div className={Styles.userprofile}>
-                        <img
-                            src={LibraryProfileIcon}
-                            alt="Library Profile Icon"
-                        />
+                        <NavLink to="/profile">
+                            <img
+                                src={LibraryProfileIcon}
+                                alt="Library Profile Icon"
+                            />
+                        </NavLink>
                     </div>
                 </div>
             </nav>
