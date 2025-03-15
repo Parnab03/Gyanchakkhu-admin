@@ -2,10 +2,15 @@ import { useState } from "react";
 import styles from "./Register.module.css";
 import AuthNav from "../AuthNavbar/AuthNav";
 import copyright from "/copyright_light.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import { app } from "../../../firebaseConfig";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const Register = () => {
+    const navigate = useNavigate();
+    const auth = getAuth();
+
     const [formData, setFormData] = useState({
         name: "",
         address: "",
@@ -27,7 +32,25 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Submit data to database
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        if (!passwordRegex.test(formData.password)) {
+            alert(
+                "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit"
+            );
+            return;
+        }
+        if (formData.password !== formData.confirmPass) {
+            alert("Password and Confirm Password do not match");
+            return;
+        }
+        createUserWithEmailAndPassword(auth, formData.email, formData.password)
+            .then((userCredential) => {
+                console.log(userCredential.user);
+                navigate("/bookdatabase");
+            })
+            .catch((error) => {
+                alert(error);
+            });
         console.log(formData);
     };
 

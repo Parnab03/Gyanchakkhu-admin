@@ -3,11 +3,16 @@ import styles from "./Login.module.css";
 import AuthNav from "../AuthNavbar/AuthNav";
 import copyright from "/copyright_light.png";
 import { NavLink, useNavigate } from "react-router-dom";
+import { app } from "../../../firebaseConfig";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
+    const navigate = useNavigate();
+    const auth = getAuth();
+
     const [formData, setFormData] = useState({
-        name: "",
-        UniqueID: "",
+        email: "",
+        uid: "",
         password: "",
     });
     const handleInputChange = (e) => {
@@ -19,13 +24,19 @@ const Login = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-    };
-    const [uid, setUid] = useState(false);
-
-    const navigate = useNavigate();
-
-    const routeHandler = () => {
-        navigate("/bookdatabase");
+        if (!formData.email || !formData.uid || !formData.password) {
+            alert("Please fill in all required fields");
+            return;
+        }
+        signInWithEmailAndPassword(auth, formData.email, formData.password)
+            .then((userCredential) => {
+                console.log(userCredential.user);
+                navigate("/bookdatabase");
+            })
+            .catch((error) => {
+                alert(error);
+            });
+        console.log(formData);
     };
 
     return (
@@ -45,9 +56,9 @@ const Login = () => {
                         <div className={styles.formgroup}>
                             <input
                                 type="text"
-                                name="library name"
-                                id="name"
-                                placeholder="Library Name"
+                                name="email"
+                                id="email"
+                                placeholder="Library Email"
                                 required
                                 onChange={handleInputChange}
                             />
@@ -55,7 +66,7 @@ const Login = () => {
                         <div className={styles.formgroup}>
                             <input
                                 type="text"
-                                name="number"
+                                name="uid"
                                 id="uid"
                                 placeholder="Library Unique ID"
                                 required
@@ -77,18 +88,16 @@ const Login = () => {
                         <button
                             type="submit"
                             className={styles.btn}
-                            onClick={routeHandler}>
+                            onClick={handleSubmit}>
                             Login
                         </button>
                     </div>
-                    {!uid && (
-                        <div className={styles.ptxt}>
-                            <p>
-                                Not registered yet?{" "}
-                                <NavLink to="/register">Register</NavLink>
-                            </p>
-                        </div>
-                    )}
+                    <div className={styles.ptxt}>
+                        <p>
+                            Not registered yet?{" "}
+                            <NavLink to="/register">Register</NavLink>
+                        </p>
+                    </div>
                 </div>
                 <div className={styles.footer}>
                     <img
