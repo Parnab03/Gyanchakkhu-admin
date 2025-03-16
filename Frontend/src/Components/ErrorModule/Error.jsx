@@ -8,7 +8,7 @@ const Error = () => {
     const navigate = useNavigate();
 
     const routeHandler = () => {
-        navigate("/bookdatabase");
+        navigate("/login");
     };
 
     return (

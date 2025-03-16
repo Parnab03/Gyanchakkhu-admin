@@ -6,10 +6,12 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { app } from "../../../firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getDatabase, ref, set } from "firebase/database";
 
 const Register = () => {
     const navigate = useNavigate();
     const auth = getAuth();
+    const database = getDatabase();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -27,6 +29,7 @@ const Register = () => {
         setFormData({
             ...formData,
             [name]: value,
+            generatedUid: generateUID(),
         });
     };
 
@@ -45,8 +48,21 @@ const Register = () => {
         }
         createUserWithEmailAndPassword(auth, formData.email, formData.password)
             .then((userCredential) => {
+                const libraryRef = ref(database, "libraryList/" + generatedUid);
+                set(libraryRef, {
+                    name: formData.name,
+                    address: formData.address,
+                    email: formData.email,
+                    number: formData.number,
+                })
+                    .then(() => {
+                        alert("Data written successfully");
+                        navigate("/bookdatabase");
+                    })
+                    .catch((error) => {
+                        alert(error);
+                    });
                 console.log(userCredential.user);
-                navigate("/bookdatabase");
             })
             .catch((error) => {
                 alert(error);
@@ -55,12 +71,17 @@ const Register = () => {
     };
 
     const generateUID = () => {
-        const libraryName = formData.name;
+        const libraryName = formData.name.replace(/\s+/g, "").toLowerCase();
         const chars = libraryName.split("");
         const randomChars = [];
         for (let i = 0; i < 5; i++) {
-            const randomIndex = Math.floor(Math.random() * chars.length);
-            randomChars.push(chars[randomIndex].toUpperCase());
+            if (chars.length > 0) {
+                const randomIndex = Math.floor(Math.random() * chars.length);
+                randomChars.push(chars[randomIndex].toUpperCase());
+                chars.splice(randomIndex, 1);
+            } else {
+                break;
+            }
         }
         const uid = `LIB${randomChars.join("")}${uuidv4()
             .substring(0, 4)

@@ -6,60 +6,124 @@ import BookDatabase from "./Components/BookDatabase/BookDatabaseMain/BookDatabas
 import RegisterBook from "./Components/BookDatabase/RegisterBook/RegisterBook";
 import Error from "./Components/ErrorModule/Error";
 import UserDatabase from "./Components/UserDatabase/UserDatabase";
+import Profile from "./Components/ProfileModule/Profile";
 
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+    const auth = getAuth();
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+                console.log("User  is logged in");
+            } else {
+                setUser(null);
+                alert("You are not logged in");
+            }
+        });
+    }, []);
+
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route
-                        path="/"
-                        element={<Navigate to="/login" replace />}
-                    />
+                    {user ? (
+                        <Route
+                            path="/"
+                            element={<Navigate to="/bookdatabase" replace />}
+                        />
+                    ) : (
+                        <Route
+                            path="/"
+                            element={<Navigate to="/login" replace />}
+                        />
+                    )}
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
-                    <Route
-                        path="/bookdatabase"
-                        element={
-                            <>
-                                <Navbar />
-                                <BookDatabase />
-                                <Footer />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/bookdatabase/registerbook"
-                        element={
-                            <>
-                                <Navbar />
-                                <RegisterBook />
-                                <Footer />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/userdatabase"
-                        element={
-                            <>
-                                <Navbar />
-                                <UserDatabase/>
-                                <Footer />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/profile"
-                        element={
-                            <>
-                                <Navbar />
-                                <Footer />
-                            </>
-                        }
-                    />
+                    {user ? (
+                        <>
+                            <Route
+                                path="/bookdatabase"
+                                element={
+                                    <>
+                                        <Navbar />
+                                        <BookDatabase />
+                                        <Footer />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/bookdatabase/registerbook"
+                                element={
+                                    <>
+                                        <Navbar />
+                                        <RegisterBook />
+                                        <Footer />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/userdatabase"
+                                element={
+                                    <>
+                                        <Navbar />
+                                        <UserDatabase />
+                                        <Footer />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/profile"
+                                element={
+                                    <>
+                                        <Navbar />
+                                        <Profile />
+                                        <Footer />
+                                    </>
+                                }
+                            />
+                        </>
+                    ) : (
+                        <>
+                            <Route
+                                path="/bookdatabase"
+                                element={
+                                    <>
+                                        <Navigate to="/login" replace />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/bookdatabase/registerbook"
+                                element={
+                                    <>
+                                        <Navigate to="/login" replace />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/userdatabase"
+                                element={
+                                    <>
+                                        <Navigate to="/login" replace />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/profile"
+                                element={
+                                    <>
+                                        <Navigate to="/login" replace />
+                                    </>
+                                }
+                            />
+                        </>
+                    )}
                     <Route path="/*" element={<Error />} />
                 </Routes>
             </BrowserRouter>

@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDIOJZRsfIsnslDkSIiIflh8JMZQjgEKfU",
-    authDomain: "gyanchakkhu-b9b48.firebaseapp.com",
-    databaseURL:
-        "https://gyanchakkhu-b9b48-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "gyanchakkhu-b9b48",
-    storageBucket: "gyanchakkhu-b9b48.firebasestorage.app",
-    messagingSenderId: "928051191328",
-    appId: "1:928051191328:web:020b956d8592ceace72645",
-    measurementId: "G-KEJR4RWPJ5",
+    mode: import.meta.env.VITE_MODE,
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
+export const database = getDatabase(app);
