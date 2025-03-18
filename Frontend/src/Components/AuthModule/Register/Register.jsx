@@ -50,6 +50,7 @@ const Register = () => {
             .then((userCredential) => {
                 const libraryRef = ref(database, "libraryList/" + generatedUid);
                 set(libraryRef, {
+                    uid: generatedUid,
                     name: formData.name,
                     address: formData.address,
                     email: formData.email,
@@ -87,6 +88,7 @@ const Register = () => {
             .substring(0, 4)
             .toUpperCase()}`;
         return uid;
+        console.log(uid);
     };
 
     const onClickHandler = (event) => {
