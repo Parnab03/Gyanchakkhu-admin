@@ -1,27 +1,113 @@
-.profileContainer {
-    max-width: 500px;
+
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 92%;
     margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #24242400;
+    border: 2px solid #6265FF;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.profileContainer h1 {
-    text-align: center;
-    margin-bottom: 20px;
 }
-
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+}
 .profileContainer p {
-    margin-bottom: 10px;
-}
+    font-size: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    color: #6E70B8;
 
+}
 .profileContainer p span {
-    font-weight: bold;
-    margin-right: 10px;
+    margin-left: 40px;
 }
 
+.qr {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #6265FF;
+  margin-right: 40px;
+}
+
+.qr img {
+    display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #24242400;
+  object-fit: cover;
+  opacity: 0.4;
+  filter: blur(4px);
+  position: absolute;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+}
+
+.qr p {
+    display: flex;
+    width: 70%;
+  position: relative;
+  font-size: 16px;
+  font-style: italic;
+  color: black;
+  text-align: center;
+  z-index: 1; 
+  line-height: 1.4;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 86%;
+    align-items: center;
+    text-align: center;
+}
+.printBtn{
+    width: 110px;
+    height: 45px;
+    border-radius: 59px;
+    color: white;
+    background: linear-gradient(
+        276deg,
+        #5a8dee 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+
+}
+.signOutBtn{
+    width: 110px;
+    height: 45px;
+    border-radius: 59px;
+    border: none;
+    cursor: pointer;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 16px;
+    margin-left: -40px;  
+
+    
+}
 /* Responsive design */
 
 @media (max-width: 768px) {

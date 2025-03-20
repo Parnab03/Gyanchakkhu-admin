@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import styles from "./Profile.module.css";
 import { getDatabase, child, get, ref } from "firebase/database";
+import qrImage from "./qrImage.png";
 
 const Profile = () => {
     const [userData, setUserData] = useState(null);
@@ -39,19 +40,41 @@ const Profile = () => {
     };
 
     return (
-        <div className={styles.profileContainer}>
-            {userData && (
-                <div>
-                    <h1>Profile</h1>
-                    <p>Name: {userData.name}</p>
-                    <p>Address: {userData.address}</p>
-                    <p>Email: {userData.email}</p>
-                    <p>Number: {userData.number}</p>
-                    <p>UID: {userData.uid}</p>
-                    <button onClick={handleSignOut}>Log Out</button>
-                </div>
-            )}
-        </div>
+      <div className={styles.profileContainer}>
+        {userData && (
+          <>
+            <div className={styles.profile}>
+              <div className={styles.details}>
+                <p>
+                  <span>Library Name</span> {userData.name}
+                </p>
+                <p>
+                  <span>Library Email</span> {userData.email}
+                </p>
+                <p>
+                  <span>Library Ph. No.</span> {userData.number}
+                </p>
+                <p>
+                  <span>Library Address</span> {userData.address}
+                </p>
+                <p>
+                  <span>Library UID </span> {userData.uid}
+                </p>
+              </div>
+              <div className={styles.qr}>
+                <img src={qrImage} alt="#" />
+                <p>Generate your Library Credential QR </p>
+              </div>
+            </div>
+            <div className={styles.buttons}>
+              <button className={styles.signOutBtn} onClick={handleSignOut}>
+                Sign Out
+              </button>
+              <button className={styles.printBtn}>Print Qr</button>
+            </div>
+          </>
+        )}
+      </div>
     );
 };
 
