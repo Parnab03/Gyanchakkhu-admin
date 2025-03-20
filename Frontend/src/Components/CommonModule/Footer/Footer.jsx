@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from "./Footer.module.css";
-import LeftImg from "/FooterLeftIcon.svg";
+import LeftImg from "/Gyanchakkhu_footer_left.png";
 import RightImg from "/FooterRightIcon.svg";
 import CenterImg from "/Gyanchakkhu_footer.png";
 import copyright from "/copyright_light.png";
