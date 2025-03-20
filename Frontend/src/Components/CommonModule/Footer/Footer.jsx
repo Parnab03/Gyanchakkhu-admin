@@ -2,13 +2,13 @@ import React from "react";
 import Styles from "./Footer.module.css";
 import LeftImg from "/FooterLeftIcon.svg";
 import RightImg from "/FooterRightIcon.svg";
-import CenterImg from "/FooterCenterLogo.svg";
+import CenterImg from "/Gyanchakkhu_footer.png";
+import copyright from "/copyright_light.png";
 
 const Footer = () => {
     return (
         <footer className={Styles.footer}>
             <div className={Styles.footercontent}>
-                {/* Left Section */}
                 <div className={Styles.footerLeft}>
                     <img
                         src={LeftImg}
@@ -17,7 +17,6 @@ const Footer = () => {
                     />
                 </div>
 
-                {/* Center Section */}
                 <div className={Styles.footerCenter}>
                     <img
                         src={CenterImg}
@@ -25,12 +24,12 @@ const Footer = () => {
                         className={Styles.footerLogo}
                     />
                     <div className={Styles.footerText}>
-                        Designed and Dev by{" "}
+                        <img src={copyright} alt="CopyRight" />
+                        2025 I Designed and Dev by&nbsp;
                         <span className={Styles.highlight}>NIRANTAR →</span>
                     </div>
                 </div>
 
-                {/* Right Section */}
                 <div className={Styles.footerRight}>
                     <img
                         src={RightImg}
