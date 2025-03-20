@@ -90,12 +90,56 @@ body {
     width: 36px;
 }
 .mainContainer {
-    width: 94%;
-    height: 500px;
-    border: 2px solid #6265ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    height: 100%;
     border-radius: 20px;
+    padding: 20px;
     margin: 35px 0px 40px 0px;
+    font-size: 20px;
+    color:#6265ff;
 }
+.details1{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.details2{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bookCard{
+    width: 85%;
+}
+.bookQr img{
+    height: 180px;
+    width: 180px;
+    border: 2px solid #6265ff;
+    /* margin-left: 40px; */
+    border-radius: 15px;
+}
+.DetailsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bookCard{
+    border: 2px solid #6265ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
 /* .bookDatabase {
     flex: 1;
 } */
