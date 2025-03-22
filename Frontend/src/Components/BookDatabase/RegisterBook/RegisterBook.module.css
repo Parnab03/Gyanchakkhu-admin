@@ -93,6 +93,7 @@ body {
     justify-content: center;
     width: 96%;
     border-radius: 20px;
+    
 }
 
 .Main {
@@ -104,6 +105,11 @@ body {
     width: 98%;
     border: 2px solid #6265ff;
     border-radius: 20px;
+        padding: 20px;
+}
+.form{
+    width: 100%;
+    position: relative;
 }
 
 .header {
@@ -112,6 +118,7 @@ body {
     margin: 20px 10px 40px 10px;
 }
 
+
 .mainform {
     display: flex;
     flex-direction: row;
@@ -119,17 +126,29 @@ body {
     justify-content: space-between;
     margin-top: 20px;
     margin: 10px;
+    width: 100%;
+
 }
 
 .formGroup {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 5px;
+    width: 48%;
+    position: relative;
+}
+.formGroup1 {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    margin: 5px;
+    width: 96.5%;
+    position: relative;
 }
 
 .formGroup input {
-    width: 440px;
+    width: 230px;
     padding: 10px;
     border-radius: 12px;
     border: 2px solid #6265ff;
@@ -143,10 +162,43 @@ body {
     }
 }
 
+.formGroup1 input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #6265ff;
+    background-color: #f000;
+    font-size: 20px;
+    color: #8284ff;
+    margin: 5px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
 .formGroup label {
     font-size: 22px;
     color: #6265ff;
-    width: 312px;
+    width: 100%;
+}
+.formGroup1 label {
+    font-size: 22px;
+    color: #6265ff;
+    width: 35%;
+}
+.details1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+.details2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
 }
 
 .buttons {
