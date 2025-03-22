@@ -1,4 +1,4 @@
-.profileContainer{
+.profileContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,11 +7,10 @@
     margin: 40px auto;
     padding: 20px;
     background-color: #24242400;
-    border: 2px solid #6265FF;
+    border: 2px solid #6265ff;
     border-radius: 10px;
-
 }
-.profile{
+.profile {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,55 +22,63 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    align-items: center;
-    color: #6E70B8;
-
+    /* align-items: center; */
+    color: #6e70b8;
 }
 .profileContainer p span {
     margin-left: 40px;
 }
 
+.qrContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 25px;
+}
+
 .qr {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 12px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #6265FF;
-  margin-right: 40px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #6265ff;
+    /* margin-right: 40px; */
 }
 
 .qr img {
     display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: #24242400;
-  object-fit: cover;
-  opacity: 0.4;
-  filter: blur(4px);
-  position: absolute;
-  mix-blend-mode: multiply;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #24242400;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: blur(4px);
+    position: absolute;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
 }
 
 .qr p {
     display: flex;
     width: 70%;
-  position: relative;
-  font-size: 16px;
-  font-style: italic;
-  color: black;
-  text-align: center;
-  z-index: 1; 
-  line-height: 1.4;
+    position: relative;
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    z-index: 1;
+    line-height: 1.4;
 }
-.buttons{
+.buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,7 +86,7 @@
     align-items: center;
     text-align: center;
 }
-.printBtn{
+.printBtn {
     width: 110px;
     height: 45px;
     border-radius: 59px;
@@ -92,9 +99,8 @@
     cursor: pointer;
     font-size: 16px;
     border: none;
-
 }
-.signOutBtn{
+.signOutBtn {
     width: 110px;
     height: 45px;
     border-radius: 59px;
@@ -103,9 +109,7 @@
     background-color: #d9d9d9;
     color: black;
     font-size: 16px;
-    margin-left: -40px;  
-
-    
+    margin-left: 40px;
 }
 /* Responsive design */
 
