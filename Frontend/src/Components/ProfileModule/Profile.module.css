@@ -29,12 +29,12 @@
         width: 50%;
     }
 } */
-/* .details p {
+.details p {
     font-size: 28px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: 1fr 1fr;
-    grid-template-columns: 40% 50%;
+    /* grid-template-columns: 40% 50%; */
     grid-gap: 10px;
     place-items: start;
     color: #6e70b8;
@@ -42,11 +42,11 @@
         margin-left: 40px;
         width: 50%;
     }
-} */
+}
 /* .profileContainer p span {
     margin-left: 40px;
 } */
-.details {
+/* .details {
     display: flex;
     flex-direction: row;
 }
@@ -68,7 +68,7 @@
     p {
         margin-bottom: 10px;
     }
-}
+} */
 
 .qr {
     position: relative;

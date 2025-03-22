@@ -44,7 +44,7 @@ const Profile = () => {
             {userData && (
                 <>
                     <div className={styles.profile}>
-                        {/* <div className={styles.details}>
+                        <div className={styles.details}>
                             <p>
                                 <span>Library Name</span>
                                 {userData.name}
@@ -61,8 +61,8 @@ const Profile = () => {
                             <p>
                                 <span>Library UID </span> {userData.uid}
                             </p>
-                        </div> */}
-                        <div className={styles.details}>
+                        </div>
+                        {/* <div className={styles.details}>
                             <div className={styles.column1}>
                                 <p>Library Name</p>
                                 <p>Library Email</p>
@@ -77,7 +77,7 @@ const Profile = () => {
                                 <p>{userData.address}</p>
                                 <p>{userData.uid}</p>
                             </div>
-                        </div>
+                        </div> */}
                         <div className={styles.qr}>
                             <img src={qrImage} alt="#" />
                             <p>Generate your Library Credential QR </p>
