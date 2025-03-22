@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { getDatabase, child, get, ref } from "firebase/database";
 import qrImage from "./qrImage.png";
@@ -10,25 +10,31 @@ const Profile = () => {
     const database = getDatabase();
     const databaseRef = ref(database);
     const libraryRef = child(databaseRef, "libraryList/");
-    get(libraryRef)
-        .then((snapshot) => {
-            if (snapshot.exists()) {
-                const libraryList = snapshot.val();
-                const userEmail = auth.currentUser.email;
-                Object.keys(libraryList).forEach((uid) => {
-                    const libraryEmail = libraryList[uid].email;
-                    if (libraryEmail === userEmail) {
-                        // console.log(libraryList[uid]);
-                        setUserData(libraryList[uid]);
-                    }
-                });
-            } else {
-                console.log("No data available");
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const snapshot = await get(libraryRef);
+                if (snapshot.exists()) {
+                    const libraryList = snapshot.val();
+                    const userEmail = auth.currentUser.email;
+                    Object.keys(libraryList).forEach((uid) => {
+                        const libraryEmail = libraryList[uid].email;
+                        if (libraryEmail === userEmail) {
+                            setUserData(libraryList[uid]);
+                            console.log(libraryList[uid]);
+                        }
+                    });
+                } else {
+                    console.log("No data available");
+                }
+            } catch (error) {
+                console.error(error);
             }
-        })
-        .catch((error) => {
-            console.error(error);
-        });
+        };
+        fetchData();
+    }, []);
+
     const handleSignOut = () => {
         signOut(auth)
             .then(() => {
@@ -46,8 +52,7 @@ const Profile = () => {
                     <div className={styles.profile}>
                         <div className={styles.details}>
                             <p>
-                                <span>Library Name</span>
-                                {userData.name}
+                                <span>Library Name</span> {userData.name}
                             </p>
                             <p>
                                 <span>Library Email</span> {userData.email}
@@ -61,6 +66,11 @@ const Profile = () => {
                             <p>
                                 <span>Library UID </span> {userData.uid}
                             </p>
+                            <button
+                                className={styles.signOutBtn}
+                                onClick={handleSignOut}>
+                                Signout
+                            </button>
                         </div>
                         {/* <div className={styles.details}>
                             <div className={styles.column1}>
@@ -78,19 +88,23 @@ const Profile = () => {
                                 <p>{userData.uid}</p>
                             </div>
                         </div> */}
-                        <div className={styles.qr}>
-                            <img src={qrImage} alt="#" />
-                            <p>Generate your Library Credential QR </p>
+                        <div className={styles.qrContainer}>
+                            <div className={styles.qr}>
+                                <img src={qrImage} alt="qrImage" />
+                                <p>Generate your Library Credential QR </p>
+                            </div>
+                            <button className={styles.printBtn}>
+                                Print QR
+                            </button>
                         </div>
                     </div>
-                    <div className={styles.buttons}>
+                    {/* <div className={styles.buttons}>
                         <button
                             className={styles.signOutBtn}
                             onClick={handleSignOut}>
                             Signout
                         </button>
-                        <button className={styles.printBtn}>Print QR</button>
-                    </div>
+                    </div> */}
                 </>
             )}
         </div>

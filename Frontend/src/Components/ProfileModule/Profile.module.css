@@ -12,68 +12,36 @@
 }
 .profile {
     display: flex;
-    align-items: center;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* width: 98%; */
-}
-/* .profileContainer p {
-    font-size: 28px;
-    display: grid;
-    grid-template-columns: 40% 50%;
-    grid-gap: 10px;
-    place-items: start;
-    color: #6e70b8;
-    span {
-        margin-left: 40px;
-        width: 50%;
-    }
-} */
-.details p {
-    font-size: 28px;
-    display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-columns: 40% 50%; */
-    grid-gap: 10px;
-    place-items: start;
-    color: #6e70b8;
-    span {
-        margin-left: 40px;
-        width: 50%;
-    }
-}
-/* .profileContainer p span {
-    margin-left: 40px;
-} */
-/* .details {
-    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+}
+.profileContainer p {
+    font-size: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    /* align-items: center; */
+    color: #6e70b8;
+}
+.profileContainer p span {
+    margin-left: 40px;
 }
 
-.column1 {
+.qrContainer {
     display: flex;
     flex-direction: column;
-    margin-right: 7%;
-    width: 30%;
-    p {
-        margin-bottom: 10px;
-    }
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 25px;
 }
-.column2 {
-    display: flex;
-    flex-direction: column;
-    margin-right: 7%;
-    width: 50%;
-    p {
-        margin-bottom: 10px;
-    }
-} */
 
 .qr {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +50,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid #6265ff;
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
 
 .qr img {
@@ -141,7 +109,7 @@
     background-color: #d9d9d9;
     color: black;
     font-size: 16px;
-    margin-left: -40px;
+    margin-left: 40px;
 }
 /* Responsive design */
 
