@@ -1,8 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .Regmain {
     display: flex;
     flex-direction: column;
@@ -73,20 +68,21 @@ body {
     justify-content: center;
     gap: 10px;
 }
-.QrMain{
+.QrMain {
     display: flex;
     flex-direction: column;
     /* border: 2px solid #6265ff; */
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-    margin: 0px 35px;
+    margin-left: 30px;
 }
 
-.QrContainer{
+.QrContainer {
     position: relative;
-    width: 250px;
-    height: 250px;
+    /* padding-bottom: -10px; ; */
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,21 +93,24 @@ body {
     border: 2px solid #6265ff;
     margin-top: 12%;
 }
-.QrContainer img{
+.QrContainer img {
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 299px;
+    height: 290px;
     background-color: #24242400;
     object-fit: cover;
     opacity: 0.4;
     filter: blur(4px);
     position: absolute;
     mix-blend-mode: multiply;
+    z-index: 0;
     top: 0;
     left: 0;
 }
-.QrContainer p{
+.QrContainer p {
     display: flex;
+    text-align: center;
+    justify-content: center;
     width: 50%;
     position: relative;
     font-size: 16px;
@@ -127,7 +126,6 @@ body {
     justify-content: center;
     width: 96%;
     border-radius: 20px;
-    
 }
 
 .Main {
@@ -139,9 +137,9 @@ body {
     width: 98%;
     border: 2px solid #6265ff;
     border-radius: 20px;
-        padding: 20px;
+    padding: 20px;
 }
-.form{
+.form {
     width: 100%;
     position: relative;
 }
@@ -152,7 +150,6 @@ body {
     margin: 20px 10px 40px 10px;
 }
 
-
 .mainform {
     display: flex;
     flex-direction: row;
@@ -161,7 +158,6 @@ body {
     margin-top: 20px;
     margin: 10px;
     width: 100%;
-
 }
 
 .formGroup {
@@ -180,7 +176,7 @@ body {
     width: 99%;
     position: relative;
 }
-.formGroup2{
+.formGroup2 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -232,15 +228,12 @@ body {
     &:focus {
         outline: none;
     }
-    
 }
-
 
 .formGroup label {
     font-size: 22px;
     color: #6265ff;
     width: 50%;
-    
 }
 .formGroup1 label {
     font-size: 22px;
@@ -252,17 +245,15 @@ body {
     color: #6265ff;
     width: 50%;
 }
-.details1{
+.details1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
-.details2{
+.details2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
 
 .buttons {
@@ -293,11 +284,20 @@ body {
 .btn1 {
     width: 260px;
     height: 50px;
-    margin: 56px 0px 15px 0px;
+    /* margin: 56px 0px 25px 0px; */
+    margin-top: 87px;
+    margin-bottom: 16px;
 }
 
 .btn2 {
     width: 150px;
     height: 50px;
-    margin-top: 80px;
+    margin-top: 20px;
+}
+.generateQR {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
 }
