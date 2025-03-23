@@ -45,33 +45,128 @@ const RegisterBook = () => {
                       />
                     </div>
                     <div className={Styles.formGroup}>
-                      <label htmlFor="librarysection">Library Section</label>
+                      <label htmlFor="librarysection">Book ID</label>
                       <input
                         type="text"
                         name="librarysection"
                         id="librarysection"
-                        placeholder="Enter Library Section"
+                        placeholder="Enter Book ID"
                       />
                     </div>
                   </div>
-                  <div className={Styles.details2}>
+                  <div className={Styles.details1}>
                     <div className={Styles.formGroup}>
-                      <label htmlFor="author">Book Id</label>
+                      <label htmlFor="author">Author</label>
                       <input
                         type="text"
                         name="bookid"
                         id="bookid"
-                        placeholder="Enter Book Id"
+                        placeholder="Enter Book Author Name"
                       />
                     </div>
 
                     <div className={Styles.formGroup}>
-                      <label htmlFor="rackno">Rack No.</label>
+                      <label htmlFor="rackno">Publisher</label>
                       <input
                         type="text"
                         name="rackno"
                         id="rackno"
+                        placeholder="Enter Publisher"
+                      />
+                    </div>
+                  </div>
+                  <div className={Styles.details1}>
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="author">Pub. Year</label>
+                      <input
+                        type="text"
+                        name="bookid"
+                        id="bookid"
+                        placeholder="Enter Pub Year"
+                      />
+                    </div>
+
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="rackno">Genre</label>
+                      <input
+                        type="text"
+                        name="rackno"
+                        id="rackno"
+                        placeholder="Enter Genre"
+                      />
+                    </div>
+                  </div>
+                  <div className={Styles.details1}>
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="author">Language</label>
+                      <input
+                        type="text"
+                        name="bookid"
+                        id="bookid"
+                        placeholder="Enter Book Language"
+                      />
+                    </div>
+
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="rackno">ISBN No.</label>
+                      <input
+                        type="text"
+                        name="rackno"
+                        id="rackno"
+                        placeholder="Enter ISBN No."
+                      />
+                    </div>
+                  </div>
+                  <div className={Styles.details1}>
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="author">Edition</label>
+                      <input
+                        type="text"
+                        name="bookid"
+                        id="bookid"
+                        placeholder="Enter Book Edition"
+                      />
+                    </div>
+
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="rackno">Page Count</label>
+                      <input
+                        type="text"
+                        name="rackno"
+                        id="rackno"
+                        placeholder="Enter Page Count"
+                      />
+                    </div>
+                  </div>
+                  <div className={Styles.details1}>
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="author">Rack No.</label>
+                      <input
+                        type="text"
+                        name="bookid"
+                        id="bookid"
                         placeholder="Enter Rack No."
+                      />
+                    </div>
+
+                    <div className={Styles.formGroup}>
+                      <label htmlFor="rackno">Library Section</label>
+                      <input
+                        type="text"
+                        name="rackno"
+                        id="rackno"
+                        placeholder="Enter Library Section"
+                      />
+                    </div>
+                  </div>
+                  <div className={Styles.details1}>
+                    <div className={Styles.formGroup2}>
+                      <label htmlFor="author">Cover image</label>
+                      <input
+                        type="file"
+                        name="bookid"
+                        id="bookid"
+                        placeholder=""
                       />
                     </div>
                   </div>
@@ -85,16 +180,19 @@ const RegisterBook = () => {
                   </div>
                 </form>
                 <div className={Styles.QrMain}>
-                  <img src={tempQr} alt="" className={Styles.Qrcode} />
+                  <div className={Styles.QrContainer}>
+                    <img src={tempQr} alt="" className={Styles.Qrcode} />
+                    <p>Generate New Book QR </p>
+                  </div>
+                  <div className={Styles.buttons}>
+                    <button type="submit" className={Styles.btn2}>
+                      Print QR
+                    </button>
+                    <button type="submit" className={Styles.btn1}>
+                      Register New Book
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div className={Styles.buttons}>
-                <button type="submit" className={Styles.btn1}>
-                  Generate New QR
-                </button>
-                <button type="submit" className={Styles.btn2}>
-                  Print QR
-                </button>
               </div>
             </div>
           </div>
