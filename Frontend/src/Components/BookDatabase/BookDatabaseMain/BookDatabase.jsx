@@ -10,22 +10,40 @@ const BookDatabase = () => {
     };
     const books = [
       {
-        id: "1001001",
-        name: "Do Epic Shit",
-        section: "3A",
-        rack: "R2",
+        coverImage:
+          "https://preview.redd.it/fgy14jrd3af41.jpg?width=640&crop=smart&auto=webp&s=d1742942d8186732215742ae0310f723a6d7af30",
+        bookId: "1001001",
+        bookName: "DUNE",
+        rackNo: "C2",
+        author: "Frank Herbert",
+        publicationYear: "2011",
+        publisher: "Gyanchakkhu 24/7",
+        librarySection: "A2",
+        language: "English",
+        genre: "Science Fiction",
+        edition: "1st Edition",
+        isbnNo: "ISBN100B001",
+        pageCount: "321",
         description:
-          "Do Epic Shit by Ankur Warikoo is a self-help book filled with insights on personal growth, success, and mindset. It covers topics like habits, failure, entrepreneurship, and self-awareness in a simple, engaging, and relatable way. The book is a mix of life lessons, real experiences, and practical advice, encouraging readers to take risks and create an impact.",
-        qrCode: "qr-code-url",
+          "Set in a distant future where noble houses vie for control of planets, Dune follows Paul Atreides, a young heir whose family takes charge of the desert planet Arrakis—the only source of the universe’s most valuable substance, spice melange. As betrayal, war, and prophecy unfold, Paul embarks on a journey of survival, power, and destiny among the native Fremen.",
       },
       {
-        id: "1001001",
-        name: "Do Epic Shit",
-        section: "3A",
-        rack: "R2",
+        coverImage:
+          "https://preview.redd.it/fgy14jrd3af41.jpg?width=640&crop=smart&auto=webp&s=d1742942d8186732215742ae0310f723a6d7af30",
+        bookId: "1001001",
+        bookName: "DUNE",
+        rackNo: "C2",
+        author: "Frank Herbert",
+        publicationYear: "2011",
+        publisher: "Gyanchakkhu 24/7",
+        librarySection: "A2",
+        language: "English",
+        genre: "Science Fiction",
+        edition: "1st Edition",
+        isbnNo: "ISBN100B001",
+        pageCount: "321",
         description:
-          "Do Epic Shit by Ankur Warikoo is a self-help book filled with insights on personal growth, success, and mindset. It covers topics like habits, failure, entrepreneurship, and self-awareness in a simple, engaging, and relatable way. The book is a mix of life lessons, real experiences, and practical advice, encouraging readers to take risks and create an impact.",
-        qrCode: "qr-code-url",
+          "Set in a distant future where noble houses vie for control of planets, Dune follows Paul Atreides, a young heir whose family takes charge of the desert planet Arrakis—the only source of the universe’s most valuable substance, spice melange. As betrayal, war, and prophecy unfold, Paul embarks on a journey of survival, power, and destiny among the native Fremen.",
       },
     ];
 
@@ -47,37 +65,77 @@ const BookDatabase = () => {
               </button>
             </div>
           </div>
-            <div className={Styles.mainContainer}>
-              {books.map((book) => (
-                <div key={book.id} className={Styles.bookCard}>
+          <div className={Styles.mainContainer}>
+            {books.map((book) => (
+              <div key={book.id} className={Styles.bookCard}>
+                <div className={Styles.cards}>
+                  <div className={Styles.bookImg}>
+                    <img src={book.coverImage} alt="#" />
+                  </div>
                   <div className={Styles.bookDetails}>
                     <div className={Styles.details1}>
                       <p>
-                        <span>Book Name: {book.name}</span>
+                        <span>Book Name </span>
+                        {book.bookName}
                       </p>
                       <p>
-                        <span>Library Section:</span> {book.section}
+                        <span>Rack No.</span> {book.rackNo}
                       </p>
                     </div>
-                    <div className={Styles.details2}>
+                    <div className={Styles.details1}>
                       <p>
-                        <span>Book ID:</span> {book.id}
+                        <span>Author</span> {book.author}
                       </p>
                       <p>
-                        <span>Rack No:</span> {book.rack}
+                        <span>Book ID</span> {book.bookId}
                       </p>
                     </div>
-                    <p>
-                      <span>Description:</span> {book.description}
-                    </p>
+                    <div className={Styles.details1}>
+                      <p>
+                        <span>Pub Year</span> {book.publicationYear}
+                      </p>
+                      <p>
+                        <span>Publisher</span> {book.publisher}
+                      </p>
+                    </div>
+                    <div className={Styles.details1}>
+                      <p>
+                        <span>Language</span> {book.language}
+                      </p>
+                      <p>
+                        <span>Genre</span> {book.genre}
+                      </p>
+                    </div>
+                    <div className={Styles.details1}>
+                      <p>
+                        <span>Edition</span> {book.edition}
+                      </p>
+                      <p>
+                        <span>ISBN No.</span> {book.isbnNo}
+                      </p>
+                    </div>
+                    <div className={Styles.details1}>
+                      <p>
+                        <span>Library Section</span> {book.librarySection}
+                      </p>
+                      <p>
+                        <span>Page Count</span> {book.pageCount}
+                      </p>
+                    </div>
+                    <p>{/* <span>Description:</span> {book.description} */}</p>
                   </div>
                   <div className={Styles.bookQr}>
                     <img src={QrCode} alt="#" />
+                    <p>Show QR</p>
                   </div>
                 </div>
-              ))}
-            </div>
+                <div className={Styles.description}>
+                  <p>{book.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
       </>
     );
 };
