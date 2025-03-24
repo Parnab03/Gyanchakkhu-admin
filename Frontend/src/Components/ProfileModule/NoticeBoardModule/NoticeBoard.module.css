@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.NavContainer {
+  display: flex;
+  justify-content: center;
+}
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 56px;
+  border: 2px solid #627eff;
+  margin: 30px;
+  width: 25%;
+  
+}
+.LibBtn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  height: 59%;
+  border-radius: 56px;
+}
+.LibBtn.selected{
+  background-color: #5a8dee;
+}
+.NoticeBtn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  /* background-color: #5a8dee; */
+  height: 59%;
+  border-radius: 56px;
+  padding: 10px;
+}
+.NoticeBtn:active{
+  background-color: #5a8dee;
+}
+.Noticeboard {
+  position: relative;
+  width: 100%;
+}
+
+.noticeContainer {
+  width: 95%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.SearchNotice {
+  width: 100%;
+  height: 61px;
+  padding: 8px 12px 10px 30px;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1.89px solid #627eff;
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.4);
+  color: #636363;
+}
+
+.AddBtn {
+  height: 61px;
+  width: 170px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  color: white;
+  background: linear-gradient(
+    276deg,
+    #5a8dee 75.7%,
+    rgba(255, 255, 255, 0.15) 180.24%
+  );
+  cursor: pointer;
+  font-size: 20px;
+}
+.NoticeList {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+.NoticeTitle {
+  border: 2px solid #5a8dee;
+  border-radius: 20px;
+  padding: 16px 25px 15px 23px;
+  width: 91.5%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
