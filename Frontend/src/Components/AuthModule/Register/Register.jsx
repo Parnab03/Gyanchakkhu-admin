@@ -88,7 +88,7 @@ const Register = () => {
             .substring(0, 4)
             .toUpperCase()}`;
         return uid;
-        console.log(uid);
+        // console.log(uid);
     };
 
     const onClickHandler = (event) => {

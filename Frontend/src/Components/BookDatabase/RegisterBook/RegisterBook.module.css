@@ -1,8 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .Regmain {
     display: flex;
     flex-direction: column;
@@ -73,27 +68,64 @@ body {
     justify-content: center;
     gap: 10px;
 }
-.QrMain{
+.QrMain {
     display: flex;
+    flex-direction: column;
+    /* border: 2px solid #6265ff; */
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.QrContainer {
+    position: relative;
+    /* padding-bottom: -10px; ; */
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
     border: 2px solid #6265ff;
-    border-radius: 15px;
-    margin: 0px 35px;
+    margin-top: 12%;
 }
-
-.Qrcode {
-    height: 230px;
-    width: auto;
-    margin: 5px;
-    border-radius: 15px;
+.QrContainer img {
+    display: flex;
+    width: 299px;
+    height: 290px;
+    background-color: #24242400;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: blur(4px);
+    position: absolute;
+    mix-blend-mode: multiply;
+    z-index: 0;
+    top: 0;
+    left: 0;
 }
-
+.QrContainer p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    z-index: 1;
+    line-height: 1.4;
+}
 .secondpart {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 96%;
     border-radius: 20px;
-    
 }
 
 .Main {
@@ -105,9 +137,9 @@ body {
     width: 98%;
     border: 2px solid #6265ff;
     border-radius: 20px;
-        padding: 20px;
+    padding: 20px;
 }
-.form{
+.form {
     width: 100%;
     position: relative;
 }
@@ -118,7 +150,6 @@ body {
     margin: 20px 10px 40px 10px;
 }
 
-
 .mainform {
     display: flex;
     flex-direction: row;
@@ -127,28 +158,35 @@ body {
     margin-top: 20px;
     margin: 10px;
     width: 100%;
-
 }
 
 .formGroup {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 5px;
-    width: 48%;
+    width: 100%;
     position: relative;
 }
 .formGroup1 {
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
+    justify-content: space-between;
     margin: 5px;
-    width: 96.5%;
+    width: 99%;
     position: relative;
+}
+.formGroup2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    justify-content: space-between;
+    width: 49.2%;
 }
 
 .formGroup input {
-    width: 230px;
+    width: 100%;
     padding: 10px;
     border-radius: 12px;
     border: 2px solid #6265ff;
@@ -177,37 +215,55 @@ body {
     }
 }
 
+.formGroup2 input {
+    width: 99.2%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #6265ff;
+    background-color: #f000;
+    font-size: 20px;
+    color: #8284ff;
+    margin: 5px;
+
+    &:focus {
+        outline: none;
+    }
+}
 
 .formGroup label {
     font-size: 22px;
     color: #6265ff;
-    width: 100%;
+    width: 50%;
 }
 .formGroup1 label {
     font-size: 22px;
     color: #6265ff;
-    width: 35%;
+    width: 19%;
 }
-.details1{
+.formGroup2 label {
+    font-size: 22px;
+    color: #6265ff;
+    width: 50%;
+}
+.details1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
-.details2{
+.details2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
 
 .buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    width: 40%;
-    gap: 50px;
+    width: 100%;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -228,11 +284,20 @@ body {
 .btn1 {
     width: 260px;
     height: 50px;
-    margin: 15px 0px 15px 12px;
+    /* margin: 56px 0px 25px 0px; */
+    margin-top: 87px;
+    margin-bottom: 16px;
 }
 
 .btn2 {
     width: 150px;
     height: 50px;
-    margin: 15px;
+    margin-top: 20px;
+}
+.generateQR {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
 }
