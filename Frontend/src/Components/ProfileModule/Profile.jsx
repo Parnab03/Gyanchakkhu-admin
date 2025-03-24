@@ -55,8 +55,9 @@ const Profile = () => {
 
     const handlePrintQR = async () => {
         // console.log("testing");
-        const doc = new jsPDF("p", "mm", "a4");
         const qrCode = document.getElementById("qr-code");
+
+        const doc = new jsPDF("p", "mm", "a4");
         const libraryName = userData.name;
         const libraryUid = userData.uid;
 
@@ -82,7 +83,7 @@ const Profile = () => {
             null,
             "center"
         );
-        const fileName = `${libraryName}-qr.pdf`;
+        const fileName = `${libraryName}@GyanQR.pdf`;
         doc.save(fileName);
     };
 
@@ -119,8 +120,9 @@ const Profile = () => {
                                     value={`${userData.name},${userData.uid}`}
                                     fgColor="#4E4E4E"
                                     // level="Q"
-                                    size={300}
+                                    size={280}
                                     id="qr-code"
+                                    className="qr-code"
                                 />
                             </div>
                         ) : (
