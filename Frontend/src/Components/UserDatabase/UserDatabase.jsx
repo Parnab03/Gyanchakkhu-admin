@@ -78,7 +78,7 @@ const UserDatabase = () => {
               </div>
             </div>
           </div>
-        ))};
+        ))}
         
       </div>
     </>
