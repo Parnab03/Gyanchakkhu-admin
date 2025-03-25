@@ -98,7 +98,7 @@ const RegisterBook = () => {
             }
         }
 
-        const fileName = `${formData.bookName}-qr.pdf`;
+        const fileName = `${formData.bookName}@GyanQR.pdf`;
         doc.save(fileName);
     };
 
@@ -123,23 +123,29 @@ const RegisterBook = () => {
         const { name, value } = e.target;
         if (name === "coverImage") {
             const file = e.target.files[0];
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                const base64Image = event.target.result;
-                if (base64Image) {
-                    setFormData({
-                        ...formData,
-                        [name]: base64Image,
-                    });
-                    handleOnSubmit(e);
-                } else {
-                    setFormData({
-                        ...formData,
-                        [name]: null,
-                    });
-                }
-            };
-            reader.readAsDataURL(file);
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const base64Image = event.target.result;
+                    if (base64Image) {
+                        setFormData({
+                            ...formData,
+                            [name]: base64Image,
+                        });
+                    } else {
+                        setFormData({
+                            ...formData,
+                            [name]: null,
+                        });
+                    }
+                };
+                reader.readAsDataURL(file);
+            } else {
+                setFormData({
+                    ...formData,
+                    [name]: "",
+                });
+            }
         } else {
             setFormData({
                 ...formData,
@@ -170,7 +176,8 @@ const RegisterBook = () => {
             if (
                 formData.coverImage &&
                 formData.coverImage !== null &&
-                formData.coverImage !== undefined
+                formData.coverImage !== undefined &&
+                formData.coverImage !== ""
             ) {
                 const userEmail = auth.currentUser.email;
                 const libraryRef = ref(database, "libraryList");
@@ -204,14 +211,30 @@ const RegisterBook = () => {
                             rackNo: formData.rackNo,
                             librarySection: formData.librarySection,
                             description: formData.description,
-                            coverImage: await getBase64Image(
-                                formData.coverImage
-                            ),
+                            coverImage: formData.coverImage,
                         };
 
                         set(bookRef, bookData)
                             .then(() => {
                                 alert("Book data saved successfully!");
+                                setFormData({
+                                    bookId: "",
+                                    description: "",
+                                    librarySection: "",
+                                    bookName: "",
+                                    rackNo: "",
+                                    author: "",
+                                    publisher: "",
+                                    publicationYear: "",
+                                    genre: "",
+                                    language: "",
+                                    isbnNo: "",
+                                    edition: "",
+                                    pageCount: "",
+                                    coverImage: "",
+                                });
+                                window.location.reload();
+                                setShowQR(false);
                             })
                             .catch((error) => {
                                 alert("Error saving book data:", error);
@@ -454,11 +477,12 @@ const RegisterBook = () => {
                                     {showQR ? (
                                         <div className={Styles.qr}>
                                             <QRCode
-                                                value={`${formData.bookName},${formData.author},${formData.publisher},${formData.publicationYear},${formData.genre},${formData.edition},`}
+                                                // value={`${formData.bookName},${formData.author},${formData.publisher},${formData.publicationYear},${formData.genre},${formData.edition},`}
+                                                value={`${formData.bookId}`}
                                                 fgColor="#4E4E4E"
                                                 bgColor="#fff"
                                                 // level="L"
-                                                size={300}
+                                                size={280}
                                                 id="qr-code"
                                             />
                                         </div>
