@@ -2,47 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.NavContainer {
-  display: flex;
-  justify-content: center;
-}
-.NavBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 56px;
-  border: 2px solid #627eff;
-  margin: 30px;
-  width: 25%;
-  
-}
-.LibBtn {
-  background: transparent;
-  border: none;
-  width: 100%;
-  font-size: 18px;
-  text-align: center;
-  padding: 10px;
-  height: 59%;
-  border-radius: 56px;
-}
-.LibBtn.selected{
-  background-color: #5a8dee;
-}
-.NoticeBtn {
-  background: transparent;
-  border: none;
-  width: 100%;
-  font-size: 18px;
-  text-align: center;
-  /* background-color: #5a8dee; */
-  height: 59%;
-  border-radius: 56px;
-  padding: 10px;
-}
-.NoticeBtn:active{
-  background-color: #5a8dee;
-}
+
 .Noticeboard {
   position: relative;
   width: 100%;

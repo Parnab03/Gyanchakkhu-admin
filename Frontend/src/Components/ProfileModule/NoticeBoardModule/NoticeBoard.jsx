@@ -1,14 +1,10 @@
 import Styles from "./NoticeBoard.module.css";
 import NewIcon from "/NewIcon.svg";
+import ProfileNav from "../ProfileNavModule/ProfileNav";
 const NoticeBoard = () => {
   return (
     <>
-      <div className={Styles.NavContainer}>
-        <div className={Styles.NavBar}>
-          <div className={Styles.LibBtn}>Libary profile</div>
-          <div className={Styles.NoticeBtn}>Notice Board</div>
-        </div>
-      </div>
+    <ProfileNav/>
       <div className={Styles.Noticeboard}>
         <div className={Styles.noticeContainer}>
           <input
