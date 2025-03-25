@@ -48,7 +48,7 @@ const BookDatabase = () => {
                     alert(`QR code for book ID ${bookId} will be hidden now.`);
                 }, 5000);
             }
-        }, 2000);
+        }, 5000);
     };
 
     const handleHideQR = (bookId) => {

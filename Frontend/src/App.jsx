@@ -9,6 +9,7 @@ import UserDatabase from "./Components/UserDatabase/UserDatabase";
 import Profile from "./Components/ProfileModule/Profile";
 import NoticeBoard from "./Components/ProfileModule/NoticeBoardModule/NoticeBoard";
 import NoticeContent from "./Components/ProfileModule/NoticeBoardModule/NoticeBoardContentModule/NoticeContent";
+import Download from "./Components/DownloadModule/Download";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -79,6 +80,7 @@ function App() {
                             </>
                         }
                     />
+                    <Route path="/download" element={<Download />} />
                     <Route
                         path="/profile/notice"
                         element={
