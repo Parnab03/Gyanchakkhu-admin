@@ -1,129 +1,185 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .UserDatabase {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+}
+.NavContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .Nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .searchContainer {
-  width: 95%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 10px;
+    width: 95%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .searchIcon {
-  position: absolute;
-  left: 35px;
-  height: 23px;
-  width: 23px;
-  color: #888;
-  font-size: 20px;
-  pointer-events: none;
+    position: absolute;
+    left: 35px;
+    height: 23px;
+    width: 23px;
+    color: #888;
+    font-size: 20px;
+    pointer-events: none;
 }
 
 .Search {
-  width: 100%;
-  height: 61px;
-  padding: 8px 12px 10px 60px;
-  font-size: 20px;
-  border: 1px solid #627eff;
-  border-radius: 59px;
-  outline: none;
-  transition: border-color 0.2s ease-in-out;
-  background: rgba(255, 255, 255, 0.4);
-  color: #636363;
+    width: 100%;
+    height: 61px;
+    padding: 8px 12px 10px 60px;
+    font-size: 20px;
+    border: 1px solid #627eff;
+    border-radius: 59px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.4);
+    color: #636363;
 }
 
 .searchBtn {
-  height: 61px;
-  width: 170px;
-  border: none;
-  border-radius: 59px;
-  margin-left: 10px;
-  color: white;
-  background: linear-gradient(
-    276deg,
-    #5a8dee 75.7%,
-    rgba(255, 255, 255, 0.15) 180.24%
-  );
-  cursor: pointer;
-  font-size: 20px;
+    height: 61px;
+    width: 170px;
+    border: none;
+    border-radius: 59px;
+    margin-left: 10px;
+    color: white;
+    background: linear-gradient(
+        276deg,
+        #5a8dee 75.7%,
+        rgba(255, 255, 255, 0.15) 180.24%
+    );
+    cursor: pointer;
+    font-size: 20px;
 }
 .Udetails {
-  border: 2px solid #5a8dee;
-  border-radius: 20px;
-  padding: 30px;
-  padding-top: 0px;
-  margin: 15px 0;
-  width: 90%;
+    border: 2px solid #5a8dee;
+    border-radius: 20px;
+    padding: 30px;
+    padding-top: 0px;
+    margin: 15px 0;
+    width: 91%;
 }
 h2 {
-  color: #5a5aee;
-  font-size: 25px;
+    color: #6265ff;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.cardUid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    img {
+        width: 30px;
+        height: auto;
+        border-radius: 50%;
+    }
 }
 
+.bookname {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    color: #6265ff;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 
 .bookItem {
-  background: #c8c9ff;
-  border: 2px solid #5a8dee;
-  border-radius: 20px;
-  width: 80%;
-  
+    background: #c8c9ff;
+    border: 2px solid #5a8dee;
+    border-radius: 20px;
+    width: 70%;
 }
 
 .dateContainer {
-  display: flex;
-  justify-content: space-evenly;
-  color: #333;
-  padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    padding: 3px 30px 3px 140px;
+    color: #6265ff;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
 .detail {
-  display: flex;
-  color: #000;
-  justify-content: space-between;
-  font-size: 24px;
-  text-align: center;
-  margin-block-end: 35px;
-  align-items: center;
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    font-size: 24px;
+    text-align: center;
+    margin-block-end: 35px;
+    align-items: center;
 }
-.detail1{
-  display: flex;
-  color: #000;
-  justify-content: space-between;
-  font-size: 24px;
-  text-align: center;
-  align-items: center;
+.detail1 {
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
 }
 .nameHeader {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .Dbtn {
-  background-color: transparent;
-  outline: none;
-  border: 0px solid;
+    background-color: transparent;
+    outline: none;
+    border: 0px solid;
 }
 .dimg {
-  width: 25px;
-  height: 60px;
+    width: 25px;
+    height: 60px;
 }
 
+.bookStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+}
+.dropdown {
+    cursor: pointer;
+    /* text-decoration: none; */
+    border: none;
+    background: none;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 30px;
+    color: #6265ff;
+    font-weight: 500;
+}
