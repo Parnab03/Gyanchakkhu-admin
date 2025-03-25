@@ -1,0 +1,107 @@
+.container {
+  text-align: center;
+  padding: 16px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 43px;
+  font-weight: 600;
+  color: #0b59d5;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #4b4dc7;
+  margin-top: 0;
+}
+
+.description {
+  font-size: 10px;
+  color: #8183ff;
+  max-width: 98%;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.phoneContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.phoneImage {
+  width: 1500px;
+  height: 500px;
+  vertical-align: bottom;
+  background-color: transparent;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  top: 52%;
+  text-align: center;
+  color: white;
+  width: 90px;
+  border: none;
+  padding: 9px;
+  margin-left: 4px;
+  gap: 50px;
+}
+.downloadButton {
+  position: fixed;
+  align-items: center;
+  text-align: center;
+  bottom: 30%;
+  background-color: #6265ff;
+  color: white;
+  width: 100px;
+  border: none;
+  padding: 8px;
+  border-radius: 56px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 0;
+}
+
+.downloadButton:hover {
+  background-color: #5548cc;
+}
+.icon {
+  width: 70px;
+  height: auto;
+  top: 150px;
+  margin-bottom: 0px;
+}
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 28px;
+  align-items: center;
+}
+.footer span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.white {
+  color: white;
+}
+.blue {
+  color: #0b59d5;
+}
