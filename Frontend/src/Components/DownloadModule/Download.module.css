@@ -41,7 +41,7 @@
 }
 
 .phoneImage {
-  width: 1500px;
+  width: 380px;
   height: 500px;
   vertical-align: bottom;
   background-color: transparent;
@@ -76,7 +76,6 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  margin-top: 0;
 }
 
 .downloadButton:hover {
@@ -85,8 +84,8 @@
 .icon {
   width: 70px;
   height: auto;
-  top: 150px;
-  margin-bottom: 0px;
+  /* top: 170px; */
+  /* padding: -70px; */
 }
 .footer {
   position: fixed;

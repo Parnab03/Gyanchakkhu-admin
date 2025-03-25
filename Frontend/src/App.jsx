@@ -80,7 +80,6 @@ function App() {
                             </>
                         }
                     />
-                    <Route path="/download" element={<Download />} />
                     <Route
                         path="/profile/notice"
                         element={
@@ -99,6 +98,7 @@ function App() {
                             </>
                         }
                     />
+                    <Route path="/download" element={<Download />} />
                     <Route path="/*" element={<Error />} />
                 </Routes>
                 {/* <Routes>
