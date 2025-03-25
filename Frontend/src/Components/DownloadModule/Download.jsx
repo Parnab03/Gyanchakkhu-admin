@@ -1,7 +1,7 @@
 import styles from "./Download.module.css";
 import GyanchakkhuIcon from "/Gyanchakhhu_new_icon.png";
 import mobileImage from "/mobileImage.png";
-import DownloadLink from "react-download-link";
+import { Link } from "react-router-dom";
 
 const Download = () => {
     return (
@@ -29,15 +29,14 @@ const Download = () => {
                             alt="GyanchakkhuIcon"
                             className={styles.icon}
                         />
-                        <DownloadLink
-                            label="Download App"
-                            filename="Gyanchakkhu.apk"
-                            exportFile={() =>
-                                "https://drive.google.com/file/d/11Z6uGOXBX9c-K11asqnZ1CTI0U9f325d/view?usp=drive_link"
-                            }
-                            className={styles.downloadButton}
-                            style={{ textDecoration: "none" }}
-                        />
+
+                        <Link
+                            to="https://github.com/sayan0328/Gyanchakkhu-mobile-app/releases/tag/Gyanchakkhu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.downloadButton}>
+                            Download App
+                        </Link>
                     </div>
                 </div>
                 <div className={styles.footer}>
