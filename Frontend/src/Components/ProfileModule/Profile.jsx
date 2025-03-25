@@ -5,6 +5,7 @@ import QRCode from "react-qr-code";
 import jsPDF from "jspdf";
 import domtoimage from "dom-to-image";
 import qrImage from "./qrImage.png";
+import ProfileNav from "./ProfileNavModule/ProfileNav";
 import styles from "./Profile.module.css";
 
 const Profile = () => {
@@ -88,62 +89,58 @@ const Profile = () => {
     };
 
     return (
+      <>
+        <ProfileNav />
         <div className={styles.profileContainer}>
-            {userData && (
-                <div className={styles.profile}>
-                    <div className={styles.details}>
-                        <p>
-                            <span>Library Name</span> {userData.name}
-                        </p>
-                        <p>
-                            <span>Library Email</span> {userData.email}
-                        </p>
-                        <p>
-                            <span>Library Ph. No.</span> {userData.number}
-                        </p>
-                        <p>
-                            <span>Library Address</span> {userData.address}
-                        </p>
-                        <p>
-                            <span>Library UID </span> {userData.uid}
-                        </p>
-                        <button
-                            className={styles.signOutBtn}
-                            onClick={handleSignOut}>
-                            Signout
-                        </button>
-                    </div>
-                    <div className={styles.qrContainer}>
-                        {showQR ? (
-                            <div className={styles.qr}>
-                                <QRCode
-                                    value={`${userData.name},${userData.uid}`}
-                                    fgColor="#4E4E4E"
-                                    // level="Q"
-                                    size={280}
-                                    id="qr-code"
-                                    className="qr-code"
-                                />
-                            </div>
-                        ) : (
-                            <div className={styles.qr}>
-                                <img src={qrImage} alt="qrImage" />
-                                <p
-                                    className={styles.generateQR}
-                                    onClick={handleGenerateQR}>
-                                    Generate your Library Credential QR
-                                </p>
-                            </div>
-                        )}
-                        <button
-                            className={styles.printBtn}
-                            onClick={handlePrintQR}>
-                            Print QR
-                        </button>
-                    </div>
-                </div>
-            )}
+          {userData && (
+            <div className={styles.profile}>
+              <div className={styles.details}>
+                <p>
+                  <span>Library Name</span> {userData.name}
+                </p>
+                <p>
+                  <span>Library Email</span> {userData.email}
+                </p>
+                <p>
+                  <span>Library Ph. No.</span> {userData.number}
+                </p>
+                <p>
+                  <span>Library Address</span> {userData.address}
+                </p>
+                <p>
+                  <span>Library UID </span> {userData.uid}
+                </p>
+                <button className={styles.signOutBtn} onClick={handleSignOut}>
+                  Signout
+                </button>
+              </div>
+              <div className={styles.qrContainer}>
+                {showQR ? (
+                  <div className={styles.qr}>
+                    <QRCode
+                      value={`${userData.name},${userData.uid}`}
+                      fgColor="#4E4E4E"
+                      // level="Q"
+                      size={300}
+                      id="qr-code"
+                    />
+                  </div>
+                ) : (
+                  <div className={styles.qr}>
+                    <img src={qrImage} alt="qrImage" />
+                    <p className={styles.generateQR} onClick={handleGenerateQR}>
+                      Generate your Library Credential QR
+                    </p>
+                  </div>
+                )}
+                <button className={styles.printBtn} onClick={handlePrintQR}>
+                  Print QR
+                </button>
+              </div>
+            </div>
+          )}
         </div>
+      </>
     );
 };
 

@@ -1,0 +1,55 @@
+.NavContainer {
+  display: flex;
+  justify-content: center;
+}
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 56px;
+  border: 2px solid #627eff;
+  margin: 30px;
+  width: 25%;
+}
+.LibBtn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  height: 59%;
+  text-decoration: none;
+}
+.NoticeBtn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 56px;
+  padding: 10px;
+  text-decoration: none;
+}
+.navlink {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 56px;
+  padding: 10px;
+  /* padding-left: 30px; */
+}
+.navlink.selected {
+  background-color: #5a8dee;
+  /* background: transparent; */
+  border: none;
+  /* width: 100%; */
+  /* font-size: 18px; */
+  text-align: center;
+  /* padding: 10px; */
+  height: 59%;
+  text-decoration: none;
+}
