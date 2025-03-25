@@ -7,8 +7,8 @@ import RegisterBook from "./Components/BookDatabase/RegisterBook/RegisterBook";
 import Error from "./Components/ErrorModule/Error";
 import UserDatabase from "./Components/UserDatabase/UserDatabase";
 import Profile from "./Components/ProfileModule/Profile";
-import Download from "./Components/DownloadModule/Download";
-
+import NoticeBoard from "./Components/ProfileModule/NoticeBoardModule/NoticeBoard";
+import NoticeContent from "./Components/ProfileModule/NoticeBoardModule/NoticeBoardContentModule/NoticeContent";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -80,9 +80,21 @@ function App() {
                         }
                     />
                     <Route
-                        path="/download"
+                        path="/profile/notice"
                         element={
-                                <Download />
+                            <>
+                                <Navbar />
+                                <NoticeBoard />
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/profile/notice/noticecontent"
+                        element={
+                            <>
+                                <NoticeContent />
+                            </>
                         }
                     />
                     <Route path="/*" element={<Error />} />
