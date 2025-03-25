@@ -7,6 +7,7 @@ import RegisterBook from "./Components/BookDatabase/RegisterBook/RegisterBook";
 import Error from "./Components/ErrorModule/Error";
 import UserDatabase from "./Components/UserDatabase/UserDatabase";
 import Profile from "./Components/ProfileModule/Profile";
+import Download from "./Components/DownloadModule/Download";
 
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -76,6 +77,12 @@ function App() {
                                 <Profile />
                                 <Footer />
                             </>
+                        }
+                    />
+                    <Route
+                        path="/download"
+                        element={
+                                <Download />
                         }
                     />
                     <Route path="/*" element={<Error />} />
