@@ -202,7 +202,7 @@ const Register = () => {
                         </p>
                     )}
                 </div>
-                <div className={styles.footer}>
+                {/* <div className={styles.footer}>
                     <img
                         src={copyright}
                         alt="CopyRight"
@@ -210,7 +210,7 @@ const Register = () => {
                     />
                     2025 I Designed and Dev by&nbsp;
                     <span className={styles.highlight}>NIRANTAR →</span>
-                </div>
+                </div> */}
             </div>
         </>
     );

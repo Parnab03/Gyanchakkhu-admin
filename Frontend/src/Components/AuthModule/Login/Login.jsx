@@ -2,9 +2,10 @@ import { useState } from "react";
 import styles from "./Login.module.css";
 import AuthNav from "../AuthNavbar/AuthNav";
 import copyright from "/copyright_light.png";
+import login_app_download from "/login_app_download.svg";
 import { NavLink, useNavigate } from "react-router-dom";
-import { app } from "../../../firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { app } from "../../../firebaseConfig";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -39,6 +40,14 @@ const Login = () => {
         console.log(formData);
     };
 
+    const handleTestCredentials = () => {
+        setFormData({
+            email: "gyanchakkhulibrary@gmail.com",
+            uid: "LIBLNIRC6B2C",
+            password: "Gyan@1234",
+        });
+    };
+
     return (
         <>
             <AuthNav />
@@ -60,6 +69,7 @@ const Login = () => {
                                 id="email"
                                 placeholder="Library Email"
                                 required
+                                value={formData.email}
                                 onChange={handleInputChange}
                             />
                         </div>
@@ -70,6 +80,7 @@ const Login = () => {
                                 id="uid"
                                 placeholder="Library Unique ID"
                                 required
+                                value={formData.uid}
                                 onChange={handleInputChange}
                             />
                         </div>
@@ -80,6 +91,7 @@ const Login = () => {
                                 id="password"
                                 placeholder="Library Password"
                                 required
+                                value={formData.password}
                                 onChange={handleInputChange}
                             />
                         </div>
@@ -98,7 +110,34 @@ const Login = () => {
                             <NavLink to="/register">Register</NavLink>
                         </p>
                     </div>
+                    <div className={styles.test}>
+                        <p>
+                            <span className={styles.star}>*</span>tap{" "}
+                            <span
+                                className={styles.highlight}
+                                onClick={handleTestCredentials}>
+                                here
+                            </span>{" "}
+                            to apply testing purpose credentials
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+            <div className={styles.appdownload}>
+                <a
+                    href="https://github.com/sayan0328/Gyanchakkhu-mobile-app/releases/tag/Gyanchakkhu"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img
+                        src={login_app_download}
+                        alt="App Download"
+                        className={styles.login_app_download}
+                    />
+                </a>
+            </div>
+
+            {/* <div className={styles.footerContainer}>
                 <div className={styles.footer}>
                     <img
                         src={copyright}
@@ -108,7 +147,7 @@ const Login = () => {
                     2025 I Designed and Dev by&nbsp;
                     <span className={styles.highlight}>NIRANTAR →</span>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 };

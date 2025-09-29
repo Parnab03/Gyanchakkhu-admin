@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 38rem;
-    height: 31rem;
+    height: 32rem;
     flex-shrink: 0;
     border-radius: 30px;
     backdrop-filter: blur(102px);
@@ -41,6 +41,23 @@ body {
         text-decoration: none;
     }
 }
+.test {
+    margin-top: -1rem;
+    color: #929292;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    .star {
+        color: rgba(255, 0, 0, 0.8);
+    }
+    .highlight {
+        color: #5a8dee;
+        cursor: pointer;
+    }
+}
+
 .login {
     display: flex;
     flex-direction: column;
@@ -109,4 +126,22 @@ body {
     .highlight {
         color: #5a8dee;
     }
+}
+
+.appdownload {
+    position: fixed;
+    bottom: -0.5rem;
+    right: 0rem;
+    z-index: 1000;
+}
+
+.login_app_download {
+    width: 25rem;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.login_app_download:hover {
+    transform: scale(1.05);
 }
