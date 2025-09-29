@@ -26,7 +26,7 @@ const Footer = () => {
                     <div className={Styles.footerText}>
                         <img src={copyright} alt="CopyRight" />
                         2025 I Designed and Dev by&nbsp;
-                        <span className={Styles.highlight}>NIRANTAR →</span>
+                        <span className={Styles.highlight}>NIRANTAR</span>
                     </div>
                 </div>
 
